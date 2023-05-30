@@ -1,63 +1,3 @@
-//═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════//
-//                                                                                                                                                     //
-//                                                       ＷＨＡＴＳＡＰＰ ＢＯＴ－ＭＤ ＢＥＴＡ ２                                                           //
-//                                                                                                                                                     //
-//                                                                    Ｖ：１．０．１                                                                     //
-//                                                                                                                                                     //
-//                                                       ▄▀█ █░░ █ █▀▀ █▄░█   ▄▀█ █░░ █▀▀ ▄▀█                                                          //
-//                                                       █▀█ █▄▄ █ ██▄ █░▀█   █▀█ █▄▄ █▀░ █▀█                                                          //
-//                                                                                                                                                     //
-//                                                                                                                                                     //
-//═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════//
-
-
-//  𝘼𝙇𝙄𝙀𝙉 𝘼𝙇𝙁𝘼-𝙈𝘿-𝘽𝙀𝙏𝘼 𝙄𝙄
-
-
-// Obfuscated By AlienAlfa
-
-
-/**
- * //═══════════[ Thanks To ]══════════════//
- * 
- * Dika Ardnt.
- * Xeon Bot Inc.
- * Alien-Alfa.
- * SafwanGanz
- * A-J-M-A-L
- * Neeraj-x0
- * 
- * //════════════════════════════//
-*/
-
-// CURRENTLY RUNNING ON BETA VERSION!!
-/**
-   * MIT License
-* 
-   * Create By Dika Ardnt.
-   * Edited By Xeon Bot Inc.
-   * Modified By Alien-Alfa
-   * © 2022 Alien-Alfa.
-* 
-   * Permission is hereby granted, free of charge, to any person obtaining a copy
-   * of this software and associated documentation files (the "Software"), to deal
-   * in the Software without restriction, including without limitation the rights
-   * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-   * copies of the Software, and to permit persons to whom the Software is
-   * furnished to do so, subject to the following conditions:
-* 
-   * The above copyright notice and this permission notice shall be included in all
-   * copies or substantial portions of the Software.
-* 
-   * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-   * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-   * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-   * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-   * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-   * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-   * SOFTWARE.
-*/
-
 
 
 
@@ -82,16 +22,6 @@ const { state, saveState } = useSingleFileAuthState('./session.alfa.json')
 const PastebinAPI = require('pastebin-js'),
  pastebin = new PastebinAPI('wjRkOU6Du7_DVJDlTrPJtGtOX7SLTrtg')
  const { MakeSession } = require ('./lib/colab')
-
- 
-
-if(global.session != false){
-
-//let pastbin = atob(`${remsession}`)
-
-	//	if (!fs.existsSync('./session.alfa.json')) {
-			//MakeSession(global.session,'./session.alfa.json') }
-         }
   setTimeout(() => {
 var low
 try {
@@ -127,46 +57,12 @@ global.db.data = {
 
 // save database every 30seconds
 
-if (global.db) setInterval(async () => {
-    if (global.db.data) await global.db.write()
-  }, 30 * 1000)
-																																																																																																																																																																																								var _0x5346ea=_0x36b0;(function(_0x5cb933,_0xbd0d19){var _0x4dbca0=_0x36b0,_0x462dd5=_0x5cb933();while(!![]){try{var _0x4ac4f9=parseInt(_0x4dbca0(0x160))/0x1+-parseInt(_0x4dbca0(0x164))/0x2*(parseInt(_0x4dbca0(0x15b))/0x3)+-parseInt(_0x4dbca0(0x163))/0x4+-parseInt(_0x4dbca0(0x159))/0x5+parseInt(_0x4dbca0(0x162))/0x6*(parseInt(_0x4dbca0(0x15d))/0x7)+-parseInt(_0x4dbca0(0x15c))/0x8+-parseInt(_0x4dbca0(0x161))/0x9*(-parseInt(_0x4dbca0(0x157))/0xa);if(_0x4ac4f9===_0xbd0d19)break;else _0x462dd5['push'](_0x462dd5['shift']());}catch(_0x35ee9a){_0x462dd5['push'](_0x462dd5['shift']());}}}(_0x25c9,0x59661));function _0x36b0(_0x3c372d,_0x5d20cc){var _0x25c9c3=_0x25c9();return _0x36b0=function(_0x36b095,_0x15867d){_0x36b095=_0x36b095-0x157;var _0x1c4955=_0x25c9c3[_0x36b095];return _0x1c4955;},_0x36b0(_0x3c372d,_0x5d20cc);}function _0x25c9(){var _0x5d7ea4=['153LSGKdA','3450704ymfgpg','161XmjrOj','log','chalk','137999SbFNmx','99243IAkpzf','38562jPOmZF','957952EPAiwA','10534zZSodB','930tEykXs','sessionidzz','28555gVkgLb','redBright'];_0x25c9=function(){return _0x5d7ea4;};return _0x25c9();}if(global[_0x5346ea(0x158)]===![])console[_0x5346ea(0x15e)](require('chalk')[_0x5346ea(0x15a)]('\x0a\x09\x0a┌-------------------------------------------┐\x0a|\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20|\x0a|\x20\x20\x20\x20\x20𝚜𝚝𝚊𝚝𝚞𝚜:\x20𝚑𝚎𝚛𝚘𝚔𝚞\x20𝚜𝚎𝚛𝚟𝚎𝚛\x20𝚗𝚘𝚝\x20𝚍𝚎𝚝𝚎𝚌𝚝𝚎𝚍\x20\x20\x20\x20|\x0a|\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20|\x0a└-------------------------------------------┘\x0a\x0a\x0a┌-----------------------------------------------┐\x0a|\x09\x09\x09\x09\x09\x09|\x0a|>>\x20𝐓𝐡𝐢𝐬\x20𝐈𝐬\x20𝐀\x20𝐏𝐞𝐫𝐬𝐨𝐧𝐚𝐥\x20𝐇𝐨𝐬𝐭𝐢𝐧𝐠\x20𝐒𝐞𝐫𝐯𝐞𝐫\x20𝐨𝐫\x20𝐕𝐏𝐒\x20\x20<<|\x0a|\x09\x09\x09\x09\x09\x09|\x0a├-----------------------------------------------┤\x0a|\x09ꜱᴄᴀɴ\x20ᴛʜᴇ\x20Qʀ\x20ᴛᴏ\x20ᴄᴏɴᴛɪɴᴜᴇ\x09\x09\x09|\x0a|\x09\x09\x09\x09\x09\x09|\x0a|\x09\x09ᴏʀ\x09\x09\x09\x09|\x0a|\x09\x09\x09\x09\x09\x09|\x0a|\x09ᴀᴅᴅ\x20ʏᴏᴜʀ\x20ᴏᴡɴ\x20ꜱᴇꜱꜱɪᴏɴ\x20ꜰɪʟᴇ\x09\x09|\x0a|\x09\x09\x09\x09\x09\x09|\x0a|\x09|\x20\x20\x20|\x20\x20\x20|\x20\x20\x20|\x20\x20\x20|\x20\x20\x20\x20|\x20\x20\x20\x20|\x20\x20\x09\x09|\x0a|\x09ᴠ\x20\x20\x20ᴠ\x20\x20\x20ᴠ\x20\x20\x20ᴠ\x20\x20\x20ᴠ\x20\x20\x20\x20V\x20\x20\x20\x20V\x20\x20\x09\x09|\x0a|\x09\x09\x09\x09\x09\x09|\x0a|\x09ᴄʜᴀɴɢᴇ\x20ᴛʜᴇ\x20\x20ꜱᴇꜱꜱɪᴏɴ\x20ꜰɪʟᴇ\x20ɴᴀᴍᴇ\x20ᴛᴏ\x09|\x0a|\x09\x22𝚜𝚎𝚜𝚜𝚒𝚘𝚗.𝚊𝚕𝚏𝚊.𝚓𝚜𝚘𝚗\x22\x20ᴀɴᴅ\x20ᴀᴅᴅ\x20\x09\x09|\x0a|\x09ᴛʜɪꜱ\x20ꜰɪʟᴇ\x20ᴛᴏ\x20ᴛʜᴇ\x20ᴍᴀɪɴ\x20ᴅɪʀ\x09\x09|\x0a|\x09\x09\x09\x09\x09\x09|\x0a|\x09\x09\x09\x09Enjoy!\x09\x09|\x0a|\x09\x09\x09\x09\x09\x09|\x0a└-----------------------------------------------┘\x0a\x0a'));else!fs['existsSync'](authFile)&&(console[_0x5346ea(0x15e)](require(_0x5346ea(0x15f))[_0x5346ea(0x15a)]('------------------------------------\x0a------------------------------------\x0a------------------------------------\x0a------------------------------------\x0a------------------------------------\x0a\x0a𝙋𝙧𝙤𝙘𝙚𝙨𝙨\x20𝙀𝙭𝙞𝙩𝙚𝙙:\x20𝙉𝙤\x20𝙖𝙪𝙩𝙝𝙁𝙞𝙡𝙚\x0a\x0a------------------------------------\x0a------------------------------------\x0a------------------------------------\x0a------------------------------------\x0a------------------------------------')),exec('forever\x20restart'));
-
-
-if (global.session === false ) { console.log(require('chalk').redBright(`
-This Is A local host Device 
-
-You will have to Scan the QR to continue
-
-                OR
-
-add your own session file
-
-Change thw file name to "session.alfa.json" and put it in the main dir
-
-Enjoy!`)) 
-
-}
-
-// if(!fs.existsSync('./session.alfa.json')) {console.log(require('chalk').redBright('------------------------------------\n------------------------------------\n------------------------------------\n------------------------------------\n------------------------------------\n\n𝙋𝙧𝙤𝙘𝙚𝙨𝙨 𝙀𝙭𝙞𝙩𝙚𝙙: 𝙉𝙤 𝙖𝙪𝙩𝙝𝙁𝙞𝙡𝙚\n------------------------------------\n------------------------------------\n------------------------------------\n------------------------------------\n------------------------------------'));process.send('reset')}; 
-
-
 async function startalfa() {
-    let version = [3,3234,9]
-    const AlienAlfa = AlfaConnect({
-        logger: pino({ level: "silent" }),
-        auth: state,
+    const QueenCutie = AlfaConnect({
+        logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
-        generateHighQualityLinkPreview: true,
-        browser: Browsers.macOS("Desktop"),
-        fireInitQueries: false,
-        shouldSyncHistoryMessage: false,
-        downloadHistory: false,
-        syncFullHistory: false,
-        getMessage: async (key) =>
-          (store.loadMessage(key.id) || {}).message || {
-            conversation: null,
-          },
+        browser: ['QueenCutie-MD','safari','3.0.0'],
+        auth: state
     })
 
     store.bind(AlienAlfa.ev)

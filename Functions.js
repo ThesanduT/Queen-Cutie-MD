@@ -1,62 +1,3 @@
-//═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════//
-//                                                                                                                                                     //
-//                                                       ＷＨＡＴＳＡＰＰ ＢＯＴ－ＭＤ ＢＥＴＡ ２                                                           //
-//                                                                                                                                                     //
-//                                                                    Ｖ：１．０．１                                                                     //
-//                                                                                                                                                     //
-//                                                       ▄▀█ █░░ █ █▀▀ █▄░█   ▄▀█ █░░ █▀▀ ▄▀█                                                          //
-//                                                       █▀█ █▄▄ █ ██▄ █░▀█   █▀█ █▄▄ █▀░ █▀█                                                          //
-//                                                                                                                                                     //
-//                                                                                                                                                     //
-//═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════//
-
-
-
-
-
-// Obfuscated By AlienAlfa
-
-
-/**
- * //═══════════[ Thanks To ]══════════════//
- * 
- * Dika Ardnt.
- * Xeon Bot Inc.
- * Alien-Alfa.
- * SafwanGanz
- * A-J-M-A-L
- * Neeraj-x0
- * 
- * //════════════════════════════//
-*/
-
-// CURRENTLY RUNNING ON BETA VERSION!!
-/**
-   * MIT License
-* 
-   * Create By Dika Ardnt.
-   * Edited By Xeon Bot Inc.
-   * Modified By Alien-Alfa
-   * © 2022 Alien-Alfa.
-* 
-   * Permission is hereby granted, free of charge, to any person obtaining a copy
-   * of this software and associated documentation files (the "Software"), to deal
-   * in the Software without restriction, including without limitation the rights
-   * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-   * copies of the Software, and to permit persons to whom the Software is
-   * furnished to do so, subject to the following conditions:
-* 
-   * The above copyright notice and this permission notice shall be included in all
-   * copies or substantial portions of the Software.
-* 
-   * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-   * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-   * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-   * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-   * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-   * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-   * SOFTWARE.
-*/
 
 
 
@@ -93,8 +34,7 @@ const { jadwaltv }= require('./lib/jadwaltv')
 const { pinterest } = require("./lib/pinterest")
 const toHur = require('@develoka/angka-terbilang-js')
 const { hentai } = require('./lib/scraper2.js')
-const { lang } = require("./AlienAlfaExtra/")
-const { AlfaMenu } = require("./lib/")
+const { AlfaMenu } = require("./lib/menulist.js")
 const { AlfaFont1, AlfaFont2, AlfaFont3, AlfaFont4, AlfaFont5, AlfaFont6, AlfaFont7, AlfaFont8, AlfaFont9, AlfaFont10, AlfaFont11, AlfaFont12, AlfaFont13, AlfaFont14, AlfaFont15, AlfaFont16, AlfaFont17, AlfaFont18, AlfaFont19, AlfaFont20, AlfaFont21, AlfaFont22, AlfaFont23, AlfaFont24, AlfaFont25, AlfaFont26, AlfaFont27, AlfaFont28, AlfaFont29, AlfaFont30, AlfaFont31, AlfaFont32, AlfaFont33, AlfaFont34, AlfaFont35, AlfaFont36, AlfaFont37, AlfaFont38, AlfaFont39 } = require("./lib/extra")
 const { AlienAlfaWiki } = require('./lib/wiki.js')
 const farrkey = require('xfarr-api')
@@ -772,7 +712,7 @@ const emoji = new EmojiAPI();
 emoji.get(satu)
 .then(emoji => {
 const buttons = [{buttonId: "y", buttonText: {displayText:satu}, type: 1}]
-const buttonMessage = {image: {url: emoji.images[dua].url},caption: lang.takeresult,footerText: `${botname}`,buttons: buttons,headerType: 4}
+const buttonMessage = {image: {url: emoji.images[dua].url},caption: takeresult,footerText: `${botname}`,buttons: buttons,headerType: 4}
 AlienAlfa.sendMessage(from, buttonMessage, {quoted:m})
 })
 } catch (e) {
@@ -1415,7 +1355,7 @@ let delbans = banUser.indexOf(orgnye)
 banUser.splice(delbans, 1)
 replay(`Successfully unbanned the user`)
 } else {
-replay(lang.mainerr)
+replay(mainerr)
 }
 }
  break
@@ -1553,7 +1493,7 @@ if (q.includes('--help')) return reply(examkosong)
  var anu = args[1]
   if (args[0] === 'potion'){
   let noh = 100000 * anu
- if (!args[1]) return reply(lang.example+` : ${prefix + command} potion 2\n 1 Potion = 100000 Money`)
+ if (!args[1]) return reply(example+` : ${prefix + command} potion 2\n 1 Potion = 100000 Money`)
  if (isMonay < noh) return reply('Your Remaining Money Is Not Sufficient For This Purchase')
  kurangMonay(m.sender, noh)
  var apalu = anu * 1
@@ -1564,7 +1504,7 @@ if (q.includes('--help')) return reply(examkosong)
  } else 
  if (args[0] === 'baitfood'){
   let noh = 5000 * anu
- if (!args[1]) return reply(lang.example+` : ${prefix + command} baitfood 2\n 1 Bait Food = 2500 Money`)
+ if (!args[1]) return reply(example+` : ${prefix + command} baitfood 2\n 1 Bait Food = 2500 Money`)
  if (isMonay < noh) return reply('Your Remaining Money Is Not Sufficient For This Purchase')
  kurangMonay(m.sender, noh)
  var apalu = anu * 1
@@ -1575,7 +1515,7 @@ if (q.includes('--help')) return reply(examkosong)
   } else 
   if (args[0] === 'limit'){
   let noh = 35000 * anu
- if (!args[1]) return reply(lang.example+` : ${prefix + command} limit 2\n 1 Limit = 35000 Money`)
+ if (!args[1]) return reply(example+` : ${prefix + command} limit 2\n 1 Limit = 35000 Money`)
  if (isMonay < noh) return reply('Your Remaining Money Is Not Sufficient For This Purchase')
  kurangMonay(m.sender, noh)
  var apalu = anu * 1
@@ -1601,7 +1541,7 @@ if (isBanChat) return reply(mess.banChat)
  var anu = args[1]
  if (args[0] === 'fish'){
  if (isIkan < anu) return reply(`You Don't Have Enough Fish(es) For This Transaction`)
- if (!args[1]) return reply(lang.example+` : ${prefix + command} fish 2\n 1 Fish = 1500 Money`)
+ if (!args[1]) return reply(example+` : ${prefix + command} fish 2\n 1 Fish = 1500 Money`)
  kurangIkan(m.sender, anu)
  let monaynya = 1500 * anu
  addMonay(m.sender, monaynya)
@@ -1611,7 +1551,7 @@ if (isBanChat) return reply(mess.banChat)
  } else
  if (args[0] === 'chicken'){
  if (isAyam < anu) return reply(`You Don't Have Enough Chicken(s) For This Transaction`)
- if (!args[1]) return reply(lang.example+` : ${prefix + command} chicken 2\n 1 Chicken = 2500 Money`)
+ if (!args[1]) return reply(example+` : ${prefix + command} chicken 2\n 1 Chicken = 2500 Money`)
  kurangAyam(m.sender, anu)
  let monaynya = 2500 * anu
  addMonay(m.sender, monaynya)
@@ -1621,7 +1561,7 @@ if (isBanChat) return reply(mess.banChat)
  } else
  if (args[0] === 'rabbit'){
  if (isKelinci < anu) return reply(`You Don't Have Enough Rabbit(s) For This Transaction`)
- if (!args[1]) return reply(lang.example+` : ${prefix + command} rabbit 2\n 1 Rabbit = 3000 Money`)
+ if (!args[1]) return reply(example+` : ${prefix + command} rabbit 2\n 1 Rabbit = 3000 Money`)
  kurangKelinci(m.sender, anu)
  let monaynya = 3000 * anu
  addMonay(m.sender, monaynya)
@@ -1631,7 +1571,7 @@ if (isBanChat) return reply(mess.banChat)
  } else
  if (args[0] === 'sheep'){
  if (isDomba < anu) return reply(`You Don't Have Enough Sheep(s) For This Transaction`)
- if (!args[1]) return reply(lang.example+` : ${prefix + command} domba 2\n 1 Sheep = 5000 money`)
+ if (!args[1]) return reply(example+` : ${prefix + command} domba 2\n 1 Sheep = 5000 money`)
  kurangDomba(m.sender, anu)
  let monaynya = 5000 * anu
  addMonay(m.sender, monaynya)
@@ -1641,7 +1581,7 @@ if (isBanChat) return reply(mess.banChat)
  } else
  if (args[0] === 'cow'){
  if (isSapi < anu) return reply(`You Don't Have Enough Cow(s) For This Transaction`)
- if (!args[1]) return reply(lang.example+` : ${prefix + command} cow 2\n 1 Cow = 10000 Money`)
+ if (!args[1]) return reply(example+` : ${prefix + command} cow 2\n 1 Cow = 10000 Money`)
  kurangSapi(m.sender, anu)
  let monaynya = 10000 * anu
  addMonay(m.sender, monaynya)
@@ -1651,7 +1591,7 @@ if (isBanChat) return reply(mess.banChat)
  } else
  if (args[0] === 'elephant'){
  if (isGajah < anu) return reply(`You Don't Have Enough Elephant(s) For This Transaction`)
- if (!args[1]) return reply(lang.example+` : ${prefix + command} elephant 2\n 1 Elephant = 15000 Money`)
+ if (!args[1]) return reply(example+` : ${prefix + command} elephant 2\n 1 Elephant = 15000 Money`)
  kurangGajah(m.sender, anu)
  let monaynya = 15000 * anu
  addMonay(m.sender, monaynya)
@@ -1661,7 +1601,7 @@ if (isBanChat) return reply(mess.banChat)
  } else
  if (args[0] === 'iron'){
  if (isBesi < anu) return reply(`You Don't Have Enough Iron(s) For This Transaction`)
- if (!args[1]) return reply(lang.example+` : ${prefix + command} iron 2\n 1 Iron = 15000 Money`)
+ if (!args[1]) return reply(example+` : ${prefix + command} iron 2\n 1 Iron = 15000 Money`)
  kurangBesi(m.sender, anu)
  let monaynya = 16000 * anu
  addMonay(m.sender, monaynya)
@@ -1671,7 +1611,7 @@ if (isBanChat) return reply(mess.banChat)
  } else
  if (args[0] === 'gold'){
  if (isEmas < anu) return reply(`You Don't Have Enough Gold(s) For This Transaction`)
- if (!args[1]) return reply(lang.example+` : ${prefix + command} gold 2\n 1 Gold = 50000 Money`)
+ if (!args[1]) return reply(example+` : ${prefix + command} gold 2\n 1 Gold = 50000 Money`)
  kurangEmas(m.sender, anu)
  let monaynya = 50000 * anu
  addMonay(m.sender, monaynya)
@@ -1681,7 +1621,7 @@ if (isBanChat) return reply(mess.banChat)
  } else
  if (args[0] === 'emerald'){
  if (isEmerald < anu) return reply(`You Don't Have Enough Emerald(s) For This Transaction`)
- if (!args[1]) return reply(lang.example+` : ${prefix + command} emerald 2\n 1 Emerald = 100000 Money`)
+ if (!args[1]) return reply(example+` : ${prefix + command} emerald 2\n 1 Emerald = 100000 Money`)
  kurangEmerald(m.sender, anu)
  let monaynya = 100000 * anu
  addMonay(m.sender, monaynya)
@@ -2013,75 +1953,75 @@ if (isBanChat) return reply(mess.banChat)
 case 'guess': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!args.join(" ")) return replay(lang.guess.example)
+if (!args.join(" ")) return replay(guess.example)
 if (args[0] === "song") {
-if (tebaklagu.hasOwnProperty(m.sender.split('@')[0])) return replay(lang.guess.unfinished)
+if (tebaklagu.hasOwnProperty(m.sender.split('@')[0])) return replay(guess.unfinished)
 let anu = await fetchJson('https://fatiharridho.github.io/tebaklagu.json')
 let result = anu[Math.floor(Math.random() * anu.length)]
 let msg = await AlienAlfa.sendMessage(m.chat, { audio: { url: result.link_song }, mimetype: 'audio/mpeg' }, { quoted: m })
-AlienAlfa.sendText(m.chat, lang.guess.song, msg).then(() => {
+AlienAlfa.sendText(m.chat, guess.song, msg).then(() => {
 tebaklagu[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
 })
 await sleep(60000)
 if (tebaklagu.hasOwnProperty(m.sender.split('@')[0])) {
 console.log("Answer: " + result.jawaban)
-AlienAlfa.sendButtonText(m.chat, [{ buttonId: 'guess song', buttonText: { displayText: lang.guessbutton.song }, type: 1 }], `Time has run out\nAnswer:  ${tebaklagu[m.sender.split('@')[0]]}\n\nWant to play? press the button below`, `${global.botname}`, m)
+AlienAlfa.sendButtonText(m.chat, [{ buttonId: 'guess song', buttonText: { displayText: guessbutton.song }, type: 1 }], `Time has run out\nAnswer:  ${tebaklagu[m.sender.split('@')[0]]}\n\nWant to play? press the button below`, `${global.botname}`, m)
 delete tebaklagu[m.sender.split('@')[0]]
 }
 } else if (args[0] === 'picture') {
-if (tebakgambar.hasOwnProperty(m.sender.split('@')[0])) return replay(lang.guess.unfinished)
+if (tebakgambar.hasOwnProperty(m.sender.split('@')[0])) return replay(guess.unfinished)
 let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebakgambar.json')
 let result = anu[Math.floor(Math.random() * anu.length)]
-AlienAlfa.sendImage(m.chat, result.img, lang.guess.picture, m).then(() => {
+AlienAlfa.sendImage(m.chat, result.img, guess.picture, m).then(() => {
 tebakgambar[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
 })
 await sleep(60000)
 if (tebakgambar.hasOwnProperty(m.sender.split('@')[0])) {
 console.log("Answer: " + result.jawaban)
-AlienAlfa.sendButtonText(m.chat, [{ buttonId: 'guess picture', buttonText: { displayText: lang.guessbutton.picture }, type: 1 }], `Time has run out\nAnswer:  ${tebakgambar[m.sender.split('@')[0]]}\n\nWant to play? press the button below`,`${global.botname}`, m)
+AlienAlfa.sendButtonText(m.chat, [{ buttonId: 'guess picture', buttonText: { displayText: guessbutton.picture }, type: 1 }], `Time has run out\nAnswer:  ${tebakgambar[m.sender.split('@')[0]]}\n\nWant to play? press the button below`,`${global.botname}`, m)
 delete tebakgambar[m.sender.split('@')[0]]
 }
 } else if (args[0] === 'word') {
-if (tebakkata.hasOwnProperty(m.sender.split('@')[0])) return replay(lang.guess.unfinished)
+if (tebakkata.hasOwnProperty(m.sender.split('@')[0])) return replay(guess.unfinished)
 let anu = await fetchJson('https://raw.githubusercontent.com/DGXeon/fungames/main/GuessTheWord.js')
 let result = anu[Math.floor(Math.random() * anu.length)]
-AlienAlfa.sendText(m.chat, lang.guess.word, m).then(() => {
+AlienAlfa.sendText(m.chat, guess.word, m).then(() => {
 tebakkata[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
 })
 await sleep(60000)
 if (tebakkata.hasOwnProperty(m.sender.split('@')[0])) {
 console.log("Answer: " + result.jawaban)
-AlienAlfa.sendButtonText(m.chat, [{ buttonId: 'guess word', buttonText: { displayText: lang.guessbutton.word }, type: 1 }], `Time Out\nAnswer:  ${tebakkata[m.sender.split('@')[0]]}\n\nWant to play? press the button below`, `${global.botname}`, m)
+AlienAlfa.sendButtonText(m.chat, [{ buttonId: 'guess word', buttonText: { displayText: guessbutton.word }, type: 1 }], `Time Out\nAnswer:  ${tebakkata[m.sender.split('@')[0]]}\n\nWant to play? press the button below`, `${global.botname}`, m)
 delete tebakkata[m.sender.split('@')[0]]
 }
 } else if (args[0] === 'sentence') {
-if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0])) return replay(lang.guess.unfinished)
+if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0])) return replay(guess.unfinished)
 let anu = await fetchJson('https://raw.githubusercontent.com/DGXeon/fungames/main/GuessTheSentence.js')
 let result = anu[Math.floor(Math.random() * anu.length)]
-AlienAlfa.sendText(m.chat, lang.guess.sentence, m).then(() => {
+AlienAlfa.sendText(m.chat, guess.sentence, m).then(() => {
 tebakkalimat[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
 })
 await sleep(60000)
 if (tebakkalimat.hasOwnProperty(m.sender.split('@')[0])) {
 console.log("Answer: " + result.jawaban)
-AlienAlfa.sendButtonText(m.chat, [{ buttonId: 'guess sentence', buttonText: { displayText: lang.guessbutton.sentence }, type: 1 }], `Time Out\nAnswer:  ${tebakkalimat[m.sender.split('@')[0]]}\n\nWant to play? press the button below`, `${global.botname}`, m)
+AlienAlfa.sendButtonText(m.chat, [{ buttonId: 'guess sentence', buttonText: { displayText: guessbutton.sentence }, type: 1 }], `Time Out\nAnswer:  ${tebakkalimat[m.sender.split('@')[0]]}\n\nWant to play? press the button below`, `${global.botname}`, m)
 delete tebakkalimat[m.sender.split('@')[0]]
 }
 } else if (args[0] === 'lyrics') {
-if (tebaklirik.hasOwnProperty(m.sender.split('@')[0])) return replay(lang.guess.unfinished)
+if (tebaklirik.hasOwnProperty(m.sender.split('@')[0])) return replay(guess.unfinished)
 let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/tebaklirik.json')
 let result = anu[Math.floor(Math.random() * anu.length)]
-AlienAlfa.sendText(m.chat, lang.guess.lyrics, m).then(() => {
+AlienAlfa.sendText(m.chat, guess.lyrics, m).then(() => {
 tebaklirik[m.sender.split('@')[0]] = result.jawaban.toLowerCase()
 })
 await sleep(60000)
 if (tebaklirik.hasOwnProperty(m.sender.split('@')[0])) {
 console.log("Answer: " + result.jawaban)
-AlienAlfa.sendButtonText(m.chat, [{ buttonId: 'guess lyrics', buttonText: { displayText: lang.guessbutton.lyrics }, type: 1 }], `Time Out\nAnswer:  ${tebaklirik[m.sender.split('@')[0]]}\n\nWant to play? press the button below`, `${global.botname}`, m)
+AlienAlfa.sendButtonText(m.chat, [{ buttonId: 'guess lyrics', buttonText: { displayText: guessbutton.lyrics }, type: 1 }], `Time Out\nAnswer:  ${tebaklirik[m.sender.split('@')[0]]}\n\nWant to play? press the button below`, `${global.botname}`, m)
 delete tebaklirik[m.sender.split('@')[0]]
 }
 } else if (args[0] === 'guess saying') {
-if (caklontong.hasOwnProperty(m.sender.split('@')[0])) return replay(lang.guess.unfinished)
+if (caklontong.hasOwnProperty(m.sender.split('@')[0])) return replay(guess.unfinished)
 let anu = await fetchJson('https://raw.githubusercontent.com/BochilTeam/database/master/games/caklontong.json')
 let result = anu[Math.floor(Math.random() * anu.length)]
 AlienAlfa.sendText(m.chat, `*Answer the following questions :*\n${result.soal}*\nTime : 60s`, m).then(() => {
@@ -2091,7 +2031,7 @@ caklontong_desk[m.sender.split('@')[0]] = result.deskripsi
 await sleep(60000)
 if (caklontong.hasOwnProperty(m.sender.split('@')[0])) {
 console.log("Answer: " + result.jawaban)
-AlienAlfa.sendButtonText(m.chat, [{ buttonId: 'guess saying', buttonText: { displayText: lang.guessbutton.saying }, type: 1 }], `Time Out\nAnswer:  ${caklontong[m.sender.split('@')[0]]}\nDescription : ${caklontong_desk[m.sender.split('@')[0]]}\n\nWant to play? press the button below`, `${global.botname}`, m)
+AlienAlfa.sendButtonText(m.chat, [{ buttonId: 'guess saying', buttonText: { displayText: guessbutton.saying }, type: 1 }], `Time Out\nAnswer:  ${caklontong[m.sender.split('@')[0]]}\nDescription : ${caklontong_desk[m.sender.split('@')[0]]}\n\nWant to play? press the button below`, `${global.botname}`, m)
 delete caklontong[m.sender.split('@')[0]]
 delete caklontong_desk[m.sender.split('@')[0]]
 }
@@ -2692,7 +2632,7 @@ if (isBan) return reply(mess.ban)
             	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                if (!isCreator) return replay(`${mess.owner}`)
-               if (!text) return replay(lang.example+` : ${prefix + command} packname|author`)
+               if (!text) return replay(example+` : ${prefix + command} packname|author`)
           global.packname = text.split("|")[0]
           global.author = text.split("|")[1]
           reply(`Exif Has Been Successfully Changed to\n\n${themeemoji} Packname : ${global.packname}\n${themeemoji} Author : ${global.author}`)
@@ -2823,9 +2763,9 @@ if (isBanChat) return reply(mess.banChat)
           	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                 if (!isCreator) return replay(`${mess.owner}`)
-                if (!quoted) return replay(lang.replycaption)
-                if (!/image/.test(mime)) return replay(lang.replycaption)
-                if (/webp/.test(mime)) return replay(lang.replycaption)
+                if (!quoted) return replay(replycaption)
+                if (!/image/.test(mime)) return replay(replycaption)
+                if (/webp/.test(mime)) return replay(replycaption)
                 let media = await AlienAlfa.downloadAndSaveMediaMessage(quoted)
                 await AlienAlfa.updateProfilePicture(botNumber, { url: media }).catch((err) => fs.unlinkSync(media))
                 reply(mess.success)
@@ -2841,9 +2781,9 @@ if (isBanChat) return reply(mess.banChat)
 if (isBanChat) return reply(mess.banChat)
                 if (!m.isGroup) return replay(`${mess.group}`)
                 if (!isAdmins) return replay(`${mess.admin}`)
-                if (!quoted) return replay(lang.replycaption)
-                if (!/image/.test(mime)) return replay(lang.replycaption)
-                if (/webp/.test(mime)) return replay(lang.replycaption)
+                if (!quoted) return replay(replycaption)
+                if (!/image/.test(mime)) return replay(replycaption)
+                if (/webp/.test(mime)) return replay(replycaption)
                 let media = await AlienAlfa.downloadAndSaveMediaMessage(quoted)
                 await AlienAlfa.updateProfilePicture(m.chat, { url: media }).catch((err) => fs.unlinkSync(media))
                 reply(mess.success)
@@ -3180,7 +3120,7 @@ if (!isBotAdmins) return reply(mess.botAdmin)
 if (!isAdmins && !isCreator) return reply(mess.admin)
 if (args.length < 1) return reply('type auto sticker on to enable\ntype auto sticker off to disable')
 if (args[0]  === 'on'){
-if (isAutoSticker) return reply(lang.active)
+if (isAutoSticker) return reply(active)
 autosticker.push(from)
 fs.writeFileSync('./database/autosticker.json', JSON.stringify(autosticker))
 reply('autosticker activated')
@@ -3203,7 +3143,7 @@ if (isBanChat) return reply(mess.banChat)
 if (!m.isGroup) return replay(mess.group)
 if (args.length < 1) return reply('type autosticker on to activate\ntype autosticker off to disable')
 if (args[0]  === 'on'){
-if (isAutoStick) return reply(lang.active)
+if (isAutoStick) return reply(active)
 _autostick.push(from)
 fs.writeFileSync('./database/autostickpc.json', JSON.stringify(autosticker))
 reply('autosticker pc activated')
@@ -3226,27 +3166,27 @@ if (!m.isGroup) return replay(mess.group)
 if (!isBotAdmins) return replay(mess.botAdmin)
 if (!isAdmins && !isCreator) return replay(mess.admin)
 if (args[0] === "on") {
-if (AntiLink) return replay(lang.active)
+if (AntiLink) return replay(active)
 ntilink.push(from)
-replay(lang.antilinkon.group)
+replay(antilinkon.group)
 var groupe = await AlienAlfa.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-AlienAlfa.sendMessage(from, {text: lang.antilinkwarn.group, contextInfo: { mentionedJid : mems }}, {quoted:m})
+AlienAlfa.sendMessage(from, {text: antilinkwarn.group, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!AntiLink) return replay(lang.inactive)
+if (!AntiLink) return replay(inactive)
 let off = ntilink.indexOf(from)
 ntilink.splice(off, 1)
-replay(lang.antilinkoff.group)
+replay(antilinkoff.group)
 } else {
   let buttonsntilink = [
   { buttonId: `${command} on`, buttonText: { displayText: 'ᴏɴ' }, type: 2 },
   { buttonId: `${command} off`, buttonText: { displayText: 'ᴏꜰꜰ' }, type: 2 }
   ]
-  await AlienAlfa.sendButtonText(m.chat, buttonsntilink, lang.enableordisable, `${global.botname}`, m)
+  await AlienAlfa.sendButtonText(m.chat, buttonsntilink, enableordisable, `${global.botname}`, m)
   }
   }
    break
@@ -3262,27 +3202,27 @@ if (!m.isGroup) return replay(mess.group)
 if (!isBotAdmins) return replay(mess.botAdmin)
 if (!isAdmins && !isCreator) return replay(mess.admin)
 if (args[0] === "on") {
-if (AntiLinkYoutubeVid) return replay(lang.active)
+if (AntiLinkYoutubeVid) return replay(active)
 ntilinkytvid.push(from)
-replay(lang.antilinkon.youtube)
+replay(antilinkon.youtube)
 var groupe = await AlienAlfa.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-AlienAlfa.sendMessage(from, {text: lang.antilinkwarn.youtube, contextInfo: { mentionedJid : mems }}, {quoted:m})
+AlienAlfa.sendMessage(from, {text: antilinkwarn.youtube, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!AntiLinkYoutubeVid) return replay(lang.inactive)
+if (!AntiLinkYoutubeVid) return replay(inactive)
 let off = ntilinkytvid.indexOf(from)
 ntilinkytvid.splice(off, 1)
-replay(lang.antilinkoff.youtube)
+replay(antilinkoff.youtube)
 } else {
   let buttonsntilink = [
   { buttonId: `${command} on`, buttonText: { displayText: 'ᴏɴ' }, type: 2 },
   { buttonId: `${command} off`, buttonText: { displayText: 'ᴏꜰꜰ' }, type: 2 }
   ]
-  await AlienAlfa.sendButtonText(m.chat, buttonsntilink, lang.enableordisable, `${global.botname}`, m)
+  await AlienAlfa.sendButtonText(m.chat, buttonsntilink, enableordisable, `${global.botname}`, m)
   }
   }
    break
@@ -3298,27 +3238,27 @@ if (!m.isGroup) return replay(mess.group)
 if (!isBotAdmins) return replay(mess.botAdmin)
 if (!isAdmins && !isCreator) return replay(mess.admin)
 if (args[0] === "on") {
-if (AntiLinkYoutubeChannel) return replay(lang.active)
+if (AntiLinkYoutubeChannel) return replay(active)
 ntilinkytch.push(from)
-replay(lang.antilinkon.youtubech)
+replay(antilinkon.youtubech)
 var groupe = await AlienAlfa.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-AlienAlfa.sendMessage(from, {text: lang.antilinkwarn.youtube, contextInfo: { mentionedJid : mems }}, {quoted:m})
+AlienAlfa.sendMessage(from, {text: antilinkwarn.youtube, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!AntiLinkYoutubeChannel) return replay(lang.inactive)
+if (!AntiLinkYoutubeChannel) return replay(inactive)
 let off = ntilinkytch.indexOf(from)
 ntilinkytch.splice(off, 1)
-replay(lang.antilinkoff.youtubech)
+replay(antilinkoff.youtubech)
 } else {
   let buttonsntilink = [
   { buttonId: `${command} on`, buttonText: { displayText: 'ᴏɴ' }, type: 2 },
   { buttonId: `${command} off`, buttonText: { displayText: 'ᴏꜰꜰ' }, type: 2 }
   ]
-  await AlienAlfa.sendButtonText(m.chat, buttonsntilink, lang.enableordisable, `${global.botname}`, m)
+  await AlienAlfa.sendButtonText(m.chat, buttonsntilink, enableordisable, `${global.botname}`, m)
   }
   }
    break
@@ -3334,27 +3274,27 @@ if (!m.isGroup) return replay(mess.group)
 if (!isBotAdmins) return replay(mess.botAdmin)
 if (!isAdmins && !isCreator) return replay(mess.admin)
 if (args[0] === "on") {
-if (AntiLinkInstagram) return replay(lang.active)
+if (AntiLinkInstagram) return replay(active)
 ntilinkig.push(from)
-replay(lang.antilinkon.instagram)
+replay(antilinkon.instagram)
 var groupe = await AlienAlfa.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-AlienAlfa.sendMessage(from, {text: lang.antilinkwarn.instagram , contextInfo: { mentionedJid : mems }}, {quoted:m})
+AlienAlfa.sendMessage(from, {text: antilinkwarn.instagram , contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!AntiLinkInstagram) return replay(lang.inactive)
+if (!AntiLinkInstagram) return replay(inactive)
 let off = ntilinkig.indexOf(from)
 ntilinkig.splice(off, 1)
-replay(lang.antilinkoff.instagram)
+replay(antilinkoff.instagram)
 } else {
   let buttonsntilink = [
   { buttonId: `${command} on`, buttonText: { displayText: 'ᴏɴ' }, type: 2 },
   { buttonId: `${command} off`, buttonText: { displayText: 'ᴏꜰꜰ' }, type: 2 }
   ]
-  await AlienAlfa.sendButtonText(m.chat, buttonsntilink, lang.enableordisable, `${global.botname}`, m)
+  await AlienAlfa.sendButtonText(m.chat, buttonsntilink, enableordisable, `${global.botname}`, m)
   }
   }
    break
@@ -3370,27 +3310,27 @@ if (!m.isGroup) return replay(mess.group)
 if (!isBotAdmins) return replay(mess.botAdmin)
 if (!isAdmins && !isCreator) return replay(mess.admin)
 if (args[0] === "on") {
-if (AntiLinkFacebook) return replay(lang.active)
+if (AntiLinkFacebook) return replay(active)
 ntilinkfb.push(from)
-replay(lang.antilinkon.facebook)
+replay(antilinkon.facebook)
 var groupe = await AlienAlfa.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-AlienAlfa.sendMessage(from, {text: lang.antilinkwarn.facebook , contextInfo: { mentionedJid : mems }}, {quoted:m})
+AlienAlfa.sendMessage(from, {text: antilinkwarn.facebook , contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!AntiLinkFacebook) return replay(lang.inactive)
+if (!AntiLinkFacebook) return replay(inactive)
 let off = ntilinkfb.indexOf(from)
 ntilinkfb.splice(off, 1)
-replay(lang.antilinkoff.facebook)
+replay(antilinkoff.facebook)
 } else {
   let buttonsntilink = [
   { buttonId: `${command} on`, buttonText: { displayText: 'ᴏɴ' }, type: 2 },
   { buttonId: `${command} off`, buttonText: { displayText: 'ᴏꜰꜰ' }, type: 2 }
   ]
-  await AlienAlfa.sendButtonText(m.chat, buttonsntilink, lang.enableordisable, `${global.botname}`, m)
+  await AlienAlfa.sendButtonText(m.chat, buttonsntilink, enableordisable, `${global.botname}`, m)
   }
   }
    break
@@ -3406,27 +3346,27 @@ if (!m.isGroup) return replay(mess.group)
 if (!isBotAdmins) return replay(mess.botAdmin)
 if (!isAdmins && !isCreator) return replay(mess.admin)
 if (args[0] === "on") {
-if (AntiLinkTelegram) return replay(lang.active)
+if (AntiLinkTelegram) return replay(active)
 ntilinktg.push(from)
-replay(lang.antilinkon.telegram)
+replay(antilinkon.telegram)
 var groupe = await AlienAlfa.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-AlienAlfa.sendMessage(from, {text: lang.antilinkwarn.telegram , contextInfo: { mentionedJid : mems }}, {quoted:m})
+AlienAlfa.sendMessage(from, {text: antilinkwarn.telegram , contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!AntiLinkTelegram) return replay(lang.inactive)
+if (!AntiLinkTelegram) return replay(inactive)
 let off = ntilinkig.indexOf(from)
 ntilinkig.splice(off, 1)
-replay(lang.antilinkoff.telegram)
+replay(antilinkoff.telegram)
 } else {
   let buttonsntilink = [
   { buttonId: `${command} on`, buttonText: { displayText: 'ᴏɴ' }, type: 2 },
   { buttonId: `${command} off`, buttonText: { displayText: 'ᴏꜰꜰ' }, type: 2 }
   ]
-  await AlienAlfa.sendButtonText(m.chat, buttonsntilink, lang.enableordisable, `${global.botname}`, m)
+  await AlienAlfa.sendButtonText(m.chat, buttonsntilink, enableordisable, `${global.botname}`, m)
   }
   }
    break
@@ -3442,27 +3382,27 @@ if (!m.isGroup) return replay(mess.group)
 if (!isBotAdmins) return replay(mess.botAdmin)
 if (!isAdmins && !isCreator) return replay(mess.admin)
 if (args[0] === "on") {
-if (AntiLinkTiktok) return replay(lang.active)
+if (AntiLinkTiktok) return replay(active)
 ntilinktt.push(from)
-replay(lang.antilinkon.tiktok)
+replay(antilinkon.tiktok)
 var groupe = await AlienAlfa.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-AlienAlfa.sendMessage(from, {text: lang.antilinkwarn.tiktok , contextInfo: { mentionedJid : mems }}, {quoted:m})
+AlienAlfa.sendMessage(from, {text: antilinkwarn.tiktok , contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!AntiLinkTiktok) return replay(lang.inactive)
+if (!AntiLinkTiktok) return replay(inactive)
 let off = ntilinktt.indexOf(from)
 ntilinktt.splice(off, 1)
-replay(lang.antilinkoff.tiktok)
+replay(antilinkoff.tiktok)
 } else {
   let buttonsntilink = [
   { buttonId: `${command} on`, buttonText: { displayText: 'ᴏɴ' }, type: 2 },
   { buttonId: `${command} off`, buttonText: { displayText: 'ᴏꜰꜰ' }, type: 2 }
   ]
-  await AlienAlfa.sendButtonText(m.chat, buttonsntilink, lang.enableordisable, `${global.botname}`, m)
+  await AlienAlfa.sendButtonText(m.chat, buttonsntilink, enableordisable, `${global.botname}`, m)
   }
   }
    break
@@ -3478,27 +3418,27 @@ if (!m.isGroup) return replay(mess.group)
 if (!isBotAdmins) return replay(mess.botAdmin)
 if (!isAdmins && !isCreator) return replay(mess.admin)
 if (args[0] === "on") {
-if (AntiLinkTwitter) return replay(lang.active)
+if (AntiLinkTwitter) return replay(active)
 ntilinktwt.push(from)
-replay(lang.antilinkon.twitter)
+replay(antilinkon.twitter)
 var groupe = await AlienAlfa.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-AlienAlfa.sendMessage(from, {text: lang.antilinkwarn.twitter , contextInfo: { mentionedJid : mems }}, {quoted:m})
+AlienAlfa.sendMessage(from, {text: antilinkwarn.twitter , contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!AntiLinkTwitter) return replay(lang.inactive)
+if (!AntiLinkTwitter) return replay(inactive)
 let off = ntilinktwt.indexOf(from)
 ntilinktwt.splice(off, 1)
-replay(lang.antilinkoff.twitter)
+replay(antilinkoff.twitter)
 } else {
   let buttonsntilink = [
   { buttonId: `${command} on`, buttonText: { displayText: 'ᴏɴ' }, type: 2 },
   { buttonId: `${command} off`, buttonText: { displayText: 'ᴏꜰꜰ' }, type: 2 }
   ]
-  await AlienAlfa.sendButtonText(m.chat, buttonsntilink, lang.enableordisable, `${global.botname}`, m)
+  await AlienAlfa.sendButtonText(m.chat, buttonsntilink, enableordisable, `${global.botname}`, m)
   }
   }
    break
@@ -3514,27 +3454,27 @@ if (!m.isGroup) return replay(mess.group)
 if (!isBotAdmins) return replay(mess.botAdmin)
 if (!isAdmins && !isCreator) return replay(mess.admin)
 if (args[0] === "on") {
-if (AntiLinkTwitter) return replay(lang.active)
+if (AntiLinkTwitter) return replay(active)
 ntilinkall.push(from)
-replay(lang.antilinkon.all)
+replay(antilinkon.all)
 var groupe = await AlienAlfa.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-AlienAlfa.sendMessage(from, {text: lang.antilinkwarn.all, contextInfo: { mentionedJid : mems }}, {quoted:m})
+AlienAlfa.sendMessage(from, {text: antilinkwarn.all, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!AntiLinkAll) return replay(lang.inactive)
+if (!AntiLinkAll) return replay(inactive)
 let off = ntilinkall.indexOf(from)
 ntilinkall.splice(off, 1)
-replay(lang.antilinkoff.all)
+replay(antilinkoff.all)
 } else {
   let buttonsntilink = [
   { buttonId: `${command} on`, buttonText: { displayText: 'ᴏɴ' }, type: 2 },
   { buttonId: `${command} off`, buttonText: { displayText: 'ᴏꜰꜰ' }, type: 2 }
   ]
-  await AlienAlfa.sendButtonText(m.chat, buttonsntilink, lang.enableordisable, `${global.botname}`, m)
+  await AlienAlfa.sendButtonText(m.chat, buttonsntilink, enableordisable, `${global.botname}`, m)
   }
   }
    break
@@ -3550,27 +3490,27 @@ if (!m.isGroup) return replay(mess.group)
 if (!isBotAdmins) return replay(mess.botAdmin)
 if (!isAdmins && !isCreator) return replay(mess.admin)
 if (args[0] === "on") {
-if (antiVirtex) return replay(lang.active)
+if (antiVirtex) return replay(active)
 ntvirtex.push(from)
-replay(lang.functionson.antivirus)
+replay(functionson.antivirus)
 var groupe = await AlienAlfa.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-AlienAlfa.sendMessage(from, {text: lang.functionswarn.antivirus, contextInfo: { mentionedJid : mems }}, {quoted:m})
+AlienAlfa.sendMessage(from, {text: functionswarn.antivirus, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!antiVirtex) return replay(lang.inactive)
+if (!antiVirtex) return replay(inactive)
 let off = ntvirtex.indexOf(from)
 ntvirtex.splice(off, 1)
-replay(lang.functionsoff.antivirus)
+replay(functionsoff.antivirus)
 } else {
   let buttonsntvirtex = [
   { buttonId: `${command} on`, buttonText: { displayText: 'ᴏɴ' }, type: 2 },
   { buttonId: `${command} off`, buttonText: { displayText: 'ᴏꜰꜰ' }, type: 2 }
   ]
-  await AlienAlfa.sendButtonText(m.chat, buttonsntvirtex, lang.enableordisable, `${global.botname}`, m)
+  await AlienAlfa.sendButtonText(m.chat, buttonsntvirtex, enableordisable, `${global.botname}`, m)
   }
   }
    break
@@ -3586,20 +3526,20 @@ if (!m.isGroup) return replay(mess.group)
 if (!isBotAdmins) return replay(mess.botAdmin)
 if (!isAdmins && !isCreator) return replay(mess.admin)
 if (args[0] === "on") {
-if (Autoreply) return replay(lang.active)
+if (Autoreply) return replay(active)
 autorep.push(from)
-replay(lang.functionson.autoreply)
+replay(functionson.autoreply)
 } else if (args[0] === "off") {
-if (!Autoreply) return replay(lang.inactive)
+if (!Autoreply) return replay(inactive)
 let off = autorep.indexOf(from)
 autorep.splice(off, 1)
-replay(lang.functionsoff.autoreply)
+replay(functionsoff.autoreply)
 } else {
   let buttonswlcm = [
   { buttonId: `${command} on`, buttonText: { displayText: 'ᴏɴ' }, type: 2 },
   { buttonId: `${command} off`, buttonText: { displayText: 'ᴏꜰꜰ' }, type: 2 }
   ]
-  await AlienAlfa.sendButtonText(m.chat, buttonswlcm, lang.enableordisable, `${global.botname}`, m)
+  await AlienAlfa.sendButtonText(m.chat, buttonswlcm, enableordisable, `${global.botname}`, m)
   }
   }
    break
@@ -3615,27 +3555,27 @@ if (!m.isGroup) return replay(mess.group)
 if (!isBotAdmins) return replay(mess.botAdmin)
 if (!isAdmins && !isCreator) return replay(mess.admin)
 if (args[0] === "on") {
-if (antiToxic) return replay(lang.active)
+if (antiToxic) return replay(active)
 nttoxic.push(from)
-replay(lang.functionson.antitoxic)
+replay(functionson.antitoxic)
 var groupe = await AlienAlfa.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-AlienAlfa.sendMessage(from, {text: lang.functionswarn.antitoxic, contextInfo: { mentionedJid : mems }}, {quoted:m})
+AlienAlfa.sendMessage(from, {text: functionswarn.antitoxic, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!antiToxic) return replay(lang.inactive)
+if (!antiToxic) return replay(inactive)
 let off = nttoxic.indexOf(from)
 nttoxic.splice(off, 1)
-replay(lang.functionsoff.antitoxic)
+replay(functionsoff.antitoxic)
 } else {
   let buttonsnttoxci = [
   { buttonId: `${command} on`, buttonText: { displayText: 'ᴏɴ' }, type: 2 },
   { buttonId: `${command} off`, buttonText: { displayText: 'ᴏꜰꜰ' }, type: 2 }
   ]
-  await AlienAlfa.sendButtonText(m.chat, buttonsnttoxic, lang.enableordisable, `${global.botname}`, m)
+  await AlienAlfa.sendButtonText(m.chat, buttonsnttoxic, enableordisable, `${global.botname}`, m)
   }
   }
    break
@@ -3651,27 +3591,27 @@ if (!m.isGroup) return replay(mess.group)
 if (!isBotAdmins) return replay(mess.botAdmin)
 if (!isAdmins && !isCreator) return replay(mess.admin)
 if (args[0] === "on") {
-if (antiWame) return replay(lang.active)
+if (antiWame) return replay(active)
 ntwame.push(from)
-replay(lang.functionson.antiwame)
+replay(functionson.antiwame)
 var groupe = await AlienAlfa.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-AlienAlfa.sendMessage(from, {text: lang.functionswarn.antiwame, contextInfo: { mentionedJid : mems }}, {quoted:m})
+AlienAlfa.sendMessage(from, {text: functionswarn.antiwame, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!antiWame) return replay(lang.inactive)
+if (!antiWame) return replay(inactive)
 let off = nttoxic.indexOf(from)
 ntwame.splice(off, 1)
-replay(lang.functionsoff.antiwame)
+replay(functionsoff.antiwame)
 } else {
   let buttonsntwame = [
   { buttonId: `${command} on`, buttonText: { displayText: 'ᴏɴ' }, type: 2 },
   { buttonId: `${command} off`, buttonText: { displayText: 'ᴏꜰꜰ' }, type: 2 }
   ]
-  await AlienAlfa.sendButtonText(m.chat, buttonsntwame, lang.enableordisable, `${global.botname}`, m)
+  await AlienAlfa.sendButtonText(m.chat, buttonsntwame, enableordisable, `${global.botname}`, m)
   }
   }
    break
@@ -3687,27 +3627,27 @@ if (!m.isGroup) return replay(mess.group)
 if (!isBotAdmins) return replay(mess.botAdmin)
 if (!isAdmins && !isCreator) return replay(mess.admin)
 if (args[0] === "on") {
-if (AntiNsfw) return replay(lang.active)
+if (AntiNsfw) return replay(active)
 ntnsfw.push(from)
-replay(lang.functionson.nsfw)
+replay(functionson.nsfw)
 var groupe = await AlienAlfa.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-AlienAlfa.sendMessage(from, {text: lang.functionswarn.nsfw, contextInfo: { mentionedJid : mems }}, {quoted:m})
+AlienAlfa.sendMessage(from, {text: functionswarn.nsfw, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!AntiNsfw) return replay(lang.inactive)
+if (!AntiNsfw) return replay(inactive)
 let off = ntnsfw.indexOf(from)
 ntnsfw.splice(off, 1)
-replay(lang.functionsoff.nsfw)
+replay(functionsoff.nsfw)
 } else {
   let buttonsntnsfw = [
   { buttonId: `${command} on`, buttonText: { displayText: 'ᴏɴ' }, type: 2 },
   { buttonId: `${command} off`, buttonText: { displayText: 'ᴏꜰꜰ' }, type: 2 }
   ]
-  await AlienAlfa.sendButtonText(m.chat, buttonsntnsfw, lang.enableordisable, `${global.botname}`, m)
+  await AlienAlfa.sendButtonText(m.chat, buttonsntnsfw, enableordisable, `${global.botname}`, m)
   }
   }
    break
@@ -3748,9 +3688,9 @@ case 'setppbot': case 'setbotpp': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!isCreator) return replay(mess.owner)
-if (!quoted) return replay(lang.replycaption)
-if (!/image/.test(mime)) return replay(lang.replycaption)
-if (/webp/.test(mime)) return replay(lang.replycaption)
+if (!quoted) return replay(replycaption)
+if (!/image/.test(mime)) return replay(replycaption)
+if (/webp/.test(mime)) return replay(replycaption)
 let media = await AlienAlfa.downloadAndSaveMediaMessage(quoted)
 await AlienAlfa.updateProfilePicture(botNumber, { url: media }).catch((err) => fs.unlinkSync(media))
 replay(mess.success)
@@ -3844,7 +3784,7 @@ if (isBanChat) return reply(mess.banChat)
 if (isBanChat) return reply(mess.banChat)
                 if (!m.quoted) reply(false)
                 let { chat, fromMe, id, isBaileys } = m.quoted
-                if (!isBaileys) return replay(lang.notbybot)
+                if (!isBaileys) return replay(notbybot)
                 AlienAlfa.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: true, id: m.quoted.id, participant: m.quoted.sender } })
             }
              break
@@ -3866,27 +3806,27 @@ for (let i of anu) {
 await sleep(1500)
 let btn = [{
 urlButton: {
-displayText: lang.texturlbutt1,
+displayText: texturlbutt1,
 url: `${global.websitex}`
 }
 }, {
 urlButton: {
-displayText: lang.texturlbutt2,
+displayText: texturlbutt2,
 url: `${global.botscript}`
 }
 }, {
 quickReplyButton: {
-displayText: lang.textbutt1,
+displayText: textbutt1,
 id: 'ping'
 }
 }, {
 quickReplyButton: {
-displayText: lang.textbutt2,
+displayText: textbutt2,
 id: 'menu'
 }  
 }, {
 quickReplyButton: {
-displayText: lang.textbutt3,
+displayText: textbutt3,
 id: 'owner'
 }
 }]
@@ -3912,27 +3852,27 @@ for (let yoi of anu) {
 await sleep(1500)
 let btn = [{
 urlButton: {
-displayText: lang.texturlbutt1,
+displayText: texturlbutt1,
 url: `${global.websitex}`
 }
 }, {
 urlButton: {
-displayText: lang.texturlbutt2,
+displayText: texturlbutt2,
 url: `${global.botscript}`
 }
 }, {
 quickReplyButton: {
-displayText: lang.textbutt1,
+displayText: textbutt1,
 id: 'ping'
 }
 }, {
 quickReplyButton: {
-displayText: lang.textbutt2,
+displayText: textbutt2,
 id: 'menu'
 }  
 }, {
 quickReplyButton: {
-displayText: lang.textbutt3,
+displayText: textbutt3,
 id: 'owner'
 }
 }]
@@ -3951,7 +3891,7 @@ replay('Broadcast Success')
                   if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!isCreator) return replay(mess.owner)
-                if (!/video/.test(mime) && !/image/.test(mime) && !/audio/.test(mime)) return reply(lang.bcerr)
+                if (!/video/.test(mime) && !/image/.test(mime) && !/audio/.test(mime)) return reply(bcerr)
                 let anu = await store.chats.all().map(v => v.id)
                 let ftroli ={key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "447405935355-1604595598@g.us"}, "message": {orderMessage: {itemCount: 999999999,status: 200, thumbnail: fs.readFileSync('./Media/theme/pic.jpg'), surface: 200, message: `${ownername}'s Broadcast`, orderTitle: `${botname}`, sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
                 reply(`*Send Broadcast To* ${anu.length} *Group Chat, Time ${anu.length * 1.5} secs*`)
@@ -3959,27 +3899,27 @@ if (!isCreator) return replay(mess.owner)
                     await sleep(1500)
                     let butoon = [{
                                 urlButton: {
-                                displayText: lang.texturlbutt1,
+                                displayText: texturlbutt1,
 url: `${global.websitex}`
                                 }
                             }, {
 urlButton: {
-displayText: lang.texturlbutt2,
+displayText: texturlbutt2,
 url: `${global.botscript}`
 }
 }, {
 quickReplyButton: {
-displayText: lang.textbutt1,
+displayText: textbutt1,
 id: 'ping'
 }
 }, {
 quickReplyButton: {
-displayText: lang.textbutt2,
+displayText: textbutt2,
 id: 'menu'
 }  
 }, {
 quickReplyButton: {
-displayText: lang.textbutt3,
+displayText: textbutt3,
 id: 'owner'
 }
 }]
@@ -3996,7 +3936,7 @@ id: 'owner'
                     } else if (/audio/.test(mime)) {
                     AlienAlfa.sendMessage(i, {audio: buffer, mimetype: 'audio/mpeg'}, { quoted : ftroli })
                     } else {
-                    reply(lang.bcerr)
+                    reply(bcerr)
                     }
                     await fs.unlinkSync(media)
                     }
@@ -4012,7 +3952,7 @@ case 'bcloc': {
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 if (!isCreator) return replay(mess.owner)
-                if (!text) return reply(lang.blocerr)
+                if (!text) return reply(blocerr)
                 let anu = await store.chats.all().map(v => v.id)
                 let [melo, melo2] = text.split`|`
                 reply(`*Send Broadcast To* ${anu.length} Chat\nTime ${anu.length * 1.5} sec`)
@@ -4033,7 +3973,7 @@ case 'chatinfo': {
 if (isBanChat) return reply(mess.banChat)
 if (!m.quoted) replay('Reply Message')
 let msg = await m.getQuotedObj()
-if (!m.quoted.isBaileys) return replay(lang.notbybot)
+if (!m.quoted.isBaileys) return replay(notbybot)
 let teks = ''
 for (let i of msg.userReceipt) {
 let read = i.readTimestamp
@@ -4136,7 +4076,7 @@ await fs.unlinkSync(encmedia)
        case 'attp2': {
 		   if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-           if (!text) return reply(lang.example+` : ${prefix + command} text`)
+           if (!text) return reply(example+` : ${prefix + command} text`)
            await AlienAlfa.sendMedia(m.chat, `https://xteam.xyz/${command}?file&text=${text}`, 'hisoka', 'morou', m, {asSticker: true})
 
          }
@@ -4252,12 +4192,12 @@ let media = await quoted.download()
 let encmedia = await AlienAlfa.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
 await fs.unlinkSync(encmedia)
 } else if (/video/.test(mime)) {
-if ((quoted.msg || quoted).seconds > 11) return reply(lang.sticviderr)
+if ((quoted.msg || quoted).seconds > 11) return reply(sticviderr)
 let media = await quoted.download()
 let encmedia = await AlienAlfa.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
 await fs.unlinkSync(encmedia)
 } else {
-reply(lang.stickererr)
+reply(stickererr)
 }
 }
  break
@@ -4269,7 +4209,7 @@ reply(lang.stickererr)
 case 'swm': case 'take': case 'stickerwm': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!args.join(" ")) return reply(lang.example+` :\nswm ${global.author}|${global.packname}`)
+if (!args.join(" ")) return reply(example+` :\nswm ${global.author}|${global.packname}`)
 const swn = args.join(" ")
 const pcknm = swn.split("|")[0];
 const atnm = swn.split("|")[1];
@@ -4281,12 +4221,12 @@ let media = await quoted.download()
 let encmedia = await AlienAlfa.sendImageAsSticker(m.chat, media, m, { packname: pcknm, author: global.atnm })
 await fs.unlinkSync(encmedia)
 } else if (/video/.test(mime)) {
-if ((quoted.msg || quoted).seconds > 11) return reply(lang.sticviderr)
+if ((quoted.msg || quoted).seconds > 11) return reply(sticviderr)
 let media = await quoted.download()
 let encmedia = await AlienAlfa.sendVideoAsSticker(m.chat, media, m, { packname: pcknm, author: atnm })
 await fs.unlinkSync(encmedia)
 } else {
-reply(lang.stickererr)
+reply(stickererr)
 }
 }
  break
@@ -4299,9 +4239,9 @@ case 'smeme': case 'stickermeme': case 'stickmeme': {
 	   if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 let { TelegraPh } = require('./lib/uploader')
-if (!text) return reply(lang.replycap)
-if (text.includes('|')) return reply(lang.replycap)
-if (!/image/.test(mime)) return reply(lang.replycap)
+if (!text) return reply(replycap)
+if (text.includes('|')) return reply(replycap)
+if (!/image/.test(mime)) return reply(replycap)
 reply(mess.wait)
 mee = await AlienAlfa.downloadAndSaveMediaMessage(quoted)
 mem = await TelegraPh(mee)
@@ -4318,7 +4258,7 @@ await fs.unlinkSync(memek)
             case 'ebinary': {
             	   if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-            if (!m.quoted.text && !text) return replay(lang.textcap)
+            if (!m.quoted.text && !text) return replay(textcap)
             let { eBinary } = require('./lib/binary')
             let teks = text ? text : m.quoted && m.quoted.text ? m.quoted.text : m.text
             let eb = await eBinary(teks)
@@ -4333,7 +4273,7 @@ if (isBanChat) return reply(mess.banChat)
             case 'dbinary': {
             	   if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-            if (!m.quoted.text && !text) return replay(lang.textcap)
+            if (!m.quoted.text && !text) return replay(textcap)
             let { dBinary } = require('./lib/binary')
             let teks = text ? text : m.quoted && m.quoted.text ? m.quoted.text : m.text
             let db = await dBinary(teks)
@@ -4348,9 +4288,9 @@ if (isBanChat) return reply(mess.banChat)
 case 'bts':
 if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-teks = lang.takeresult
+teks = takeresult
 buffer = `https://api.dapuhy.xyz/api/randomimage/batues?apikey=0gly81wDky`
-AlienAlfa.sendMessage(from, {image:{url:buffer}, caption:lang.takeresult}, {quoted:m})
+AlienAlfa.sendMessage(from, {image:{url:buffer}, caption:takeresult}, {quoted:m})
  break
 
 
@@ -4366,7 +4306,7 @@ nyz2 = await fetchJson(`https://myselfff.herokuapp.com/docs/wallpaper/${command}
 nyz3 = await getBuffer(nyz2.list.gambar)
 AlienAlfa.sendMessage(from, {image : nyz3, caption:`By ${global.botname}`}, {quoted:m}) 						
 } catch (e) {
-error(lang.mainerr)
+error(mainerr)
 }
  break
 
@@ -4388,17 +4328,17 @@ case 'tickle':
 reply(mess.wait)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/${command}`)
                            var wbuttsss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let buttonssMessages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttsss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, buttonssMessages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -4418,7 +4358,7 @@ reply(mess.wait)
 NoHorny = await fetchJson(`https://myselfff.herokuapp.com/docs/nsfw/${command}`)
 YesHorny = await getBuffer(NoHorny.result)
 AlienAlfa.sendMessage(from, {image:YesHorny},{quoted:m})
-} catch (e) {error(lang.mainerr)}	
+} catch (e) {error(mainerr)}	
  break
 
 
@@ -4435,7 +4375,7 @@ spankd = await axios.get(`https://nekos.life/api/v2/img/spank`)
   let spbuff = await getBuffer(spankd.data.url)
 let spgif = await GIFBufferToVideoBuffer(spbuff)   
         await AlienAlfa.sendMessage(m.chat,{video: spgif, gifPlayback:true},{ quoted:m }).catch(err => {
-                    return reply(lang.mainerr)
+                    return reply(mainerr)
                                     })
  break
 
@@ -4453,7 +4393,7 @@ bjd = await axios.get(`https://api.waifu.pics/nsfw/blowjob`)
   let bjf = await getBuffer(bjd.data.url)
 let bjif = await GIFBufferToVideoBuffer(bjf)   
         await AlienAlfa.sendMessage(m.chat,{video: bjif, gifPlayback:true},{ quoted:m }).catch(err => {
-                    return reply(lang.mainerr)
+                    return reply(mainerr)
                                     })
  break
 
@@ -4489,12 +4429,12 @@ reply(mess.wait)
     ]
   let button2Messages = {
    image: {url:waifudd.data.url},
-   caption:  lang.takeresult,
+   caption:  takeresult,
   buttons: trapbot,
   headerType: 1
   }     
             await AlienAlfa.sendMessage(m.chat, button2Messages, { quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -4514,12 +4454,12 @@ if (!AntiNsfw) return reply(mess.nsfw)
     ]
   let button3Messages = {
    image: {url:waifudd.data.url},
-   caption:  lang.takeresult,
+   caption:  takeresult,
   buttons: hnekobot,
   headerType: 1
   }      
             await AlienAlfa.sendMessage(m.chat, button3Messages, { quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -4540,12 +4480,12 @@ reply(mess.wait)
     ]
   let button4Messages = {
    image: {url:waifudd.data.url},
-   caption:  lang.takeresult,
+   caption:  takeresult,
   buttons: nwaifubot,
   headerType: 1
   }      
             await AlienAlfa.sendMessage(m.chat, button4Messages, { quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -4560,17 +4500,17 @@ case 'gasm':
 reply(mess.wait)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/${command}`)
                            var wbuttsss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let buttonsssMessages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttsss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, buttonsssMessages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -4584,17 +4524,17 @@ case 'smug2':
 reply(mess.wait)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/smug`)
                            var wbuttsss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let button1ssMessages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttsss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, button1ssMessages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -4608,17 +4548,17 @@ case 'foxgirl':
 reply(mess.wait)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/fox_girl`)
                            var wbuttsss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let button12ssMessages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttsss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, button12ssMessages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -4636,12 +4576,12 @@ if (!m.isGroup) return replay(mess.group)
     ]
   let xx1button3Messages = {
    image: {url:waifudd.data.url},
-   caption:  lang.takeresult,
+   caption:  takeresult,
   buttons: xxhnekobot,
   headerType: 1
   }      
             await AlienAlfa.sendMessage(m.chat, xx1button3Messages, { quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -4655,17 +4595,17 @@ case 'waifu3':
 reply(mess.wait)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/waifu`)
                            var wbuttsss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let button112ssMessages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttsss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, button112ssMessages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -4679,17 +4619,17 @@ case 'neko2':
 reply(mess.wait)						
    waifud = await axios.get('https://waifu.pics/api/sfw/neko')
                 var wbutsss = [
-        {buttonId: `.neko`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.neko`, buttonText: {displayText: textNext}, type: 1},
         ]
       let buttonssMessage = {
        image: {url:waifud.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbutsss,
       headerType: 4
       }
             await AlienAlfa.sendMessage(m.chat,buttonssMessage, { quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })               
                  break
 
@@ -4703,17 +4643,17 @@ case 'animecuddle':
 reply(mess.wait)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/cuddle`)
                            var wbuttsss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let buttonsosMessages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttsss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, buttonsosMessages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -4727,17 +4667,17 @@ case 'animeslap':
 reply(mess.wait)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/slap`)
                            var wbuttsss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let btutttonssMessages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttsss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, btutttonssMessages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -4751,17 +4691,17 @@ case 'animepat':
 reply(mess.wait)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/pat`)
                            var wbuttsss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let xxbuttonssMessages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttsss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, xxbuttonssMessages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -4775,17 +4715,17 @@ case 'animeneko':
 reply(mess.wait)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/neko`)
                            var wbuttsss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let buttonsTsMessages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttsss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, buttonsTsMessages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -4799,17 +4739,17 @@ case 'animehug':
 reply(mess.wait)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/hug`)
                            var wbuttsss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let buttonussMessages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttsss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, buttonussMessages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -4823,17 +4763,17 @@ case 'animekiss':
 reply(mess.wait)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/kiss`)
                            var wbuttsss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let bxxuttonssMessages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttsss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, bxxuttonssMessages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -4847,17 +4787,17 @@ case 'animewlp':
 reply(mess.wait)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/wallpaper`)
                            var wbuttsss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let buttoxnssMessages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttsss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, buttoxnssMessages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -4871,17 +4811,17 @@ case 'animespank':
 reply(mess.wait)						
  waifudd = await axios.get(`https://nekos.life/api/v2/img/spank`)
                            var wbuttsss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let buttonssxMessages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttsss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, buttonssxMessages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -4895,17 +4835,17 @@ case 'animecry':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/cry`)
                            var wbutt1sss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let button1ssxMessages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbutt1sss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, button1ssxMessages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -4919,17 +4859,17 @@ case 'animekill':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/kill`)
                            var wbuttszzss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let buttonszzsxMessages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttszzss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, buttonszzsxMessages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -4943,17 +4883,17 @@ case 'animelick':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/lick`)
                            var wbuttszz12ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let buttonszzsx12Messages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttszz12ss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, buttonszzsx12Messages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -4967,17 +4907,17 @@ case 'animebite':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/bite`)
                            var wbuttszz123ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let buttonszzsx123Messages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttszz123ss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, buttonszzsx123Messages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -4991,17 +4931,17 @@ case 'animeyeet':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/yeet`)
                            var wbuttszz124ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let buttonszzsx124Messages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttszz124ss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, buttonszzsx124Messages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -5015,17 +4955,17 @@ case 'animebully':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/lick`)
                            var wbuttszz125ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let buttonszzsx125Messages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttszz125ss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, buttonszzsx125Messages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -5039,17 +4979,17 @@ case 'animebonk':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/bonk`)
                            var wbuttszz126ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let buttonszzsx126Messages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttszz126ss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, buttonszzsx126Messages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -5063,17 +5003,17 @@ case 'animewink':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/wink`)
                            var wbuttszz127ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let buttonszzsx127Messages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttszz127ss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, buttonszzsx127Messages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -5087,17 +5027,17 @@ case 'animepoke':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/poke`)
                            var wbuttszz128ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let buttonszzsx128Messages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttszz128ss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, buttonszzsx128Messages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -5111,17 +5051,17 @@ case 'animesmile':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/smile`)
                            var wbuttszz129ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let buttonszzsx129Messages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttszz129ss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, buttonszzsx129Messages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -5135,17 +5075,17 @@ case 'animewave':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/wave`)
                            var wbuttszz1210ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let buttonszzsx1210Messages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttszz1210ss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, buttonszzsx1210Messages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -5159,17 +5099,17 @@ case 'animeawoo':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/awoo`)
                            var wbuttszz1211ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let buttonszzsx1211Messages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttszz1211ss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, buttonszzsx1211Messages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -5183,17 +5123,17 @@ case 'animeblush':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/blush`)
                            var wbuttszz1212ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let buttonszzsx1212Messages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttszz1212ss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, buttonszzsx1212Messages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -5207,17 +5147,17 @@ case 'animesmug':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/smug`)
                            var wbuttszz1213ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let buttonszzsx1213Messages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttszz1213ss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, buttonszzsx1213Messages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -5231,17 +5171,17 @@ case 'animeglomp':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/glomp`)
                            var wbuttszz1214ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let buttonszzsx1214Messages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttszz1214ss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, buttonszzsx1214Messages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -5255,17 +5195,17 @@ case 'animehappy':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/happy`)
                            var wbuttszz1215ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let buttonszzsx1215Messages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttszz1215ss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, buttonszzsx1215Messages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -5279,17 +5219,17 @@ case 'animedance':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/dance`)
                            var wbuttszz1216ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let buttonszzsx1216Messages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttszz1216ss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, buttonszzsx1216Messages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -5303,17 +5243,17 @@ case 'animecringe':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/cringe`)
                            var wbuttszz1217ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let buttonszzsx1217Messages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttszz1217ss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, buttonszzsx1217Messages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -5327,17 +5267,17 @@ case 'animehighfive':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/highfive`)
                            var wbuttszz1218ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let buttonszzsx1218Messages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttszz1218ss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, buttonszzsx1218Messages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -5351,17 +5291,17 @@ case 'animehandhold':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/handhold`)
                            var wbuttszz1219ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let buttonszzsx1219Messages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttszz1219ss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, buttonszzsx1219Messages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -5375,17 +5315,17 @@ case 'animemegumin':
 reply(mess.wait)						
  waifudd = await axios.get(`https://api.waifu.pics/sfw/megumin`)
                            var wbuttszz1220ss = [
-        {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+        {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
         ]
       let buttonszzsx1220Messages = {
        image: {url:waifudd.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
       buttons: wbuttszz1220ss,
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, buttonszzsx1220Messages,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -5399,17 +5339,17 @@ case 'shinobu2':
 reply(mess.wait)						
                     ud = await axios.get('https://waifu.pics/api/sfw/shinobu')
 var wbutsss = [
-    {buttonId: `.shinobu`, buttonText: {displayText: lang.textNext}, type: 1},
+    {buttonId: `.shinobu`, buttonText: {displayText: textNext}, type: 1},
          ]
       let buttonsesMessage = {
       image: {url:ud.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
           buttons: wbutsss,
      headerType: 4
                       }
 await AlienAlfa.sendMessage(m.chat,buttonsesMessage, { quoted:m }).catch(err => {
-     return(lang.mainerr)
+     return(mainerr)
     })               
  break
 
@@ -5423,17 +5363,17 @@ case 'megumin2':
 reply(mess.wait)						
                     ud = await axios.get('https://waifu.pics/api/sfw/megumin')
 var wbutsss = [
-    {buttonId: `.megumin`, buttonText: {displayText: lang.textNext}, type: 1},
+    {buttonId: `.megumin`, buttonText: {displayText: textNext}, type: 1},
          ]
       let buttonzMessage = {
       image: {url:ud.data.url},
-       caption:  lang.takeresult,
+       caption:  takeresult,
       footer: `${global.botname}`,
           buttons: wbutsss,
      headerType: 4
                       }
 await AlienAlfa.sendMessage(m.chat,buttonzMessage, { quoted:m }).catch(err => {
-     return(lang.mainerr)
+     return(mainerr)
     })               
  break
 
@@ -5447,17 +5387,17 @@ case 'awoo2':
 reply(mess.wait)						
  waifudd = await axios.get(`https://waifu.pics/api/sfw/awoo`)
  var wbuttsss = [
-    {buttonId: `.${command}`, buttonText: {displayText: lang.textNext}, type: 1},
+    {buttonId: `.${command}`, buttonText: {displayText: textNext}, type: 1},
     ]
   let button1Messages = {
    image: {url:waifudd.data.url},
-   caption:  lang.takeresult,
+   caption:  takeresult,
    footer: `${global.botname}`,
   buttons: wbuttsss,
   headerType: 2
   }       
             await AlienAlfa.sendMessage(m.chat, button1Messages, { quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
  break
 
@@ -5479,7 +5419,7 @@ const wall = new AnimeWallpaper();
             .catch(() => null);
 const i = Math.floor(Math.random() * wallpaper.length);
 var walb = [
-        {buttonId: `.${command} ${q}`, buttonText: {displayText: lang.textNext}, type: 1},        
+        {buttonId: `.${command} ${q}`, buttonText: {displayText: textNext}, type: 1},        
         ]
       let wal = {
        image: {url:wallpaper[i].image},
@@ -5489,7 +5429,7 @@ var walb = [
       headerType: 4
       }     
             await AlienAlfa.sendMessage(m.chat, wal,{ quoted:m }).catch(err => {
-                    return(lang.mainerr)
+                    return(mainerr)
                 })
 //AlienAlfa.sendMessage(m.chat,{image:{url:wallpaper[i].image},caption:`*Query :* ${q}`})            
  break
@@ -5532,7 +5472,7 @@ case 'naruto':
 			    var query = ["naruto hd","naruto boruto","naruto sasuke", "naruto aesthetic", "naruto aesthetic"]
                 var data = await pinterest(pickRandom(query))
 				var but = [{buttonId: `naruto`, buttonText: { displayText: "Next➡️" }, type: 1 }]
-				AlienAlfa.sendMessage(from, { caption: lang.takeresult, image: { url: pickRandom(data.result) }, buttons: but, footer: `${botname}` }, { quoted: m })
+				AlienAlfa.sendMessage(from, { caption: takeresult, image: { url: pickRandom(data.result) }, buttons: but, footer: `${botname}` }, { quoted: m })
  			     break
 
 
@@ -5546,7 +5486,7 @@ case 'yaoi':
 			    var query = ["yaoi","yaoi aesthetic","yaoi hd","yaoi ganteng"]
                 var data = await pinterest(pickRandom(query))
 				var but = [{buttonId: `${command}`, buttonText: { displayText: "Next➡️" }, type: 1 }]
-				AlienAlfa.sendMessage(from, { caption: lang.takeresult, image: { url: pickRandom(data.result) }, buttons: but, footer: `${botname}` }, { quoted: m })
+				AlienAlfa.sendMessage(from, { caption: takeresult, image: { url: pickRandom(data.result) }, buttons: but, footer: `${botname}` }, { quoted: m })
  			     break
 
 
@@ -5557,11 +5497,11 @@ case 'coffee': case 'kopi': {
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
             let buttons = [
-                    {buttonId: `coffe`, buttonText: {displayText: lang.textNext}, type: 1}
+                    {buttonId: `coffe`, buttonText: {displayText: textNext}, type: 1}
                 ]
                 let buttonMessage = {
                     image: { url: 'https://coffee.alexflipnote.dev/random' },
-                    caption: lang.takeresult,
+                    caption: takeresult,
                     footer: `${botname}`,
                     buttons: buttons,
                     headerType: 4
@@ -5637,7 +5577,7 @@ if (isBanChat) return reply(mess.banChat)
                 let media = await AlienAlfa.downloadAndSaveMediaMessage(quoted)                
                 let anu = await TelegraPh(media)
                 let buf = await getBuffer(`https://cililitan.herokuapp.com/api/${command}?url=${anu}`)
-                AlienAlfa.sendMessage(m.chat, { image: buf, caption: lang.madeby+` ${botname}` }, { quoted: m}).catch ((err) => reply(mess.error))
+                AlienAlfa.sendMessage(m.chat, { image: buf, caption: madeby+` ${botname}` }, { quoted: m}).catch ((err) => reply(mess.error))
                 }
                  break
 
@@ -5653,7 +5593,7 @@ if (isBanChat) return reply(mess.banChat)
                 let media = await AlienAlfa.downloadAndSaveMediaMessage(quoted)                
                 let anu = await TelegraPh(media)
                 let buf = await getBuffer(`https://cililitan.herokuapp.com/api/gay?url=${anu}`)
-                AlienAlfa.sendMessage(m.chat, { image: buf, caption: lang.madeby+` ${botname}` }, { quoted: m}).catch ((err) => reply(mess.error))
+                AlienAlfa.sendMessage(m.chat, { image: buf, caption: madeby+` ${botname}` }, { quoted: m}).catch ((err) => reply(mess.error))
                 }
                  break
 
@@ -5669,7 +5609,7 @@ if (isBanChat) return reply(mess.banChat)
                 let media = await AlienAlfa.downloadAndSaveMediaMessage(quoted)                
                 let anu = await TelegraPh(media)
                 let buf = await getBuffer(`https://cililitan.herokuapp.com/api/delete?url=${anu}`)
-                AlienAlfa.sendMessage(m.chat, { image: buf, caption: lang.madeby+` ${botname}` }, { quoted: m}).catch ((err) => reply(mess.error))
+                AlienAlfa.sendMessage(m.chat, { image: buf, caption: madeby+` ${botname}` }, { quoted: m}).catch ((err) => reply(mess.error))
                 }
                  break
 
@@ -5685,7 +5625,7 @@ if (isBanChat) return reply(mess.banChat)
                 let media = await AlienAlfa.downloadAndSaveMediaMessage(quoted)                
                 let anu = await TelegraPh(media)
                 let buf = await getBuffer(`https://cililitan.herokuapp.com/api/fotojatoh?url=${anu}`)
-                AlienAlfa.sendMessage(m.chat, { image: buf, caption: lang.madeby+` ${botname}` }, { quoted: m}).catch ((err) => reply(mess.error))
+                AlienAlfa.sendMessage(m.chat, { image: buf, caption: madeby+` ${botname}` }, { quoted: m}).catch ((err) => reply(mess.error))
                 }
                  break
 
@@ -5701,7 +5641,7 @@ if (isBanChat) return reply(mess.banChat)
                 let media = await AlienAlfa.downloadAndSaveMediaMessage(quoted)                
                 let anu = await TelegraPh(media)
                 let buf = await getBuffer(`https://cililitan.herokuapp.com/api/beautiful?url=${anu}`)
-                AlienAlfa.sendMessage(m.chat, { image: buf, caption: lang.madeby+` ${botname}` }, { quoted: m}).catch ((err) => reply(mess.error))
+                AlienAlfa.sendMessage(m.chat, { image: buf, caption: madeby+` ${botname}` }, { quoted: m}).catch ((err) => reply(mess.error))
                 }
                  break
 
@@ -5712,7 +5652,7 @@ if (isBanChat) return reply(mess.banChat)
             case 'readmore': {
             if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(lang.example+` : ${prefix + command} halo gaes`)
+                if (!text) return reply(example+` : ${prefix + command} halo gaes`)
                 anu = await fetchJson(`https://cililitan.herokuapp.com/api/readmore?teks=${text}`)
                reply(`${anu.result}`)
             }
@@ -5746,7 +5686,7 @@ if (isBanChat) return reply(mess.banChat)
             reply(mess.wait)
             try {
               anu = await axios.get(`https://tinyurl.com/api-create.php?url=${q}`)
-              reply(`${anu.data}`+lang.takeresult)
+              reply(`${anu.data}`+takeresult)
               } catch (e) {
               emror = String(e)
               reply(`${e}`)
@@ -5761,7 +5701,7 @@ if (isBanChat) return reply(mess.banChat)
 case 'fliptext': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (args.length < 1) return replay(lang.example+`:\n${prefix}fliptext ${ownername}`)
+if (args.length < 1) return replay(example+`:\n${prefix}fliptext ${ownername}`)
 quere = args.join(" ")
 flipe = quere.split('').reverse().join('')
 replay(`\`\`\`「 FLIP TEXT 」\`\`\`\n*•> Normal :*\n${quere}\n*•> Flip :*\n${flipe}`)
@@ -5775,13 +5715,13 @@ replay(`\`\`\`「 FLIP TEXT 」\`\`\`\n*•> Normal :*\n${quere}\n*•> Flip :*\
 case 'toletter': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!Number(args[0])) return replay(lang.example+`:\n${prefix}toletter 956`)
+if (!Number(args[0])) return replay(example+`:\n${prefix}toletter 956`)
 try {
 quere = args.join(" ")
 convertes = await toHur(quere)
 replay(`\`\`\`「 ALPHABET 」\`\`\`\n*•> Number :*\n${quere}\n*•> Alphabet :*\n${convertes}`)
 } catch {
-replay(lang.mainerr)
+replay(mainerr)
 }
 }
  break
@@ -5984,7 +5924,7 @@ teks1 = q.split("|")[0]
 teks2 = q.split("|")[1]
 maker.textpro("https://textpro.me/create-glitch-text-effect-style-tik-tok-983.html", [
     `${teks1}`,`${teks2}`])
-  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
     break
 
@@ -6000,7 +5940,7 @@ if(!q) return reply(`Use ${prefix + command} text`)
 reply(mess.wait)
 maker.textpro("https://textpro.me/3d-box-text-effect-online-880.html", [
     `${q}`,])
-.then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+.then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
 .catch((err) => console.log(err));
  break
 
@@ -6017,7 +5957,7 @@ if(!q) return reply(`Use ${prefix + command} text`)
 reply(mess.wait)
  maker.textpro("https://textpro.me/dropwater-text-effect-872.html", [
      `${q}`,])
-    .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+    .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
     .catch((err) => console.log(err));
       break
 
@@ -6034,7 +5974,7 @@ if (isBanChat) return reply(mess.banChat)
   reply(mess.wait)
   maker.textpro("https://textpro.me/create-lion-logo-mascot-online-938.html", [
       `${q}`,])
-     .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+     .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
      .catch((err) => console.log(err));
       break
 
@@ -6051,7 +5991,7 @@ if (isBanChat) return reply(mess.banChat)
       reply(mess.wait)
       maker.textpro("https://textpro.me/create-art-paper-cut-text-effect-online-1022.html", [
 `${q}`,])
-         .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+         .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
          .catch((err) => console.log(err));
           break
 
@@ -6068,7 +6008,7 @@ if (isBanChat) return reply(mess.banChat)
       reply(mess.wait)
       maker.textpro("https://textpro.me/create-a-transformer-text-effect-online-1035.html", [
 `${q}`,])
-.then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+.then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
 .catch((err) => console.log(err));
  break
 
@@ -6087,7 +6027,7 @@ if (isBanChat) return reply(mess.banChat)
        teks2 = q.split("|")[1]
        maker.textpro("https://textpro.me/create-harry-potter-text-effect-online-1025.html", [
  `${teks1}`,`${teks2}`])
- .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+ .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
  .catch((err) => console.log(err));
   break
 
@@ -6104,7 +6044,7 @@ if (isBanChat) return reply(mess.banChat)
       reply(mess.wait)
       maker.textpro("https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html", [
 `${q}`,])
-         .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+         .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
          .catch((err) => console.log(err));
           break
 
@@ -6121,7 +6061,7 @@ if(!q) return reply(`Use ${prefix + command} text`)
 reply(mess.wait)
 maker.textpro("https://textpro.me/3d-stone-cracked-cool-text-effect-1029.html", [
     `${q}`,])
-  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
     break
 
@@ -6138,7 +6078,7 @@ if(!q) return reply(`Use ${prefix + command} text`)
 reply(mess.wait)
 maker.textpro("https://textpro.me/create-3d-avengers-logo-online-974.html", [
     `${q}`,])
-  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
     break
 
@@ -6155,7 +6095,7 @@ if(!q) return reply(`Use ${prefix + command} text`)
 reply(mess.wait)
 maker.textpro("https://textpro.me/online-thunder-text-effect-generator-1031.html", [
     `${q}`,])
-  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
     break
 
@@ -6172,7 +6112,7 @@ if(!q) return reply(`Use ${prefix + command} text`)
 reply(mess.wait)
 maker.textpro("https://textpro.me/write-text-on-foggy-window-online-free-1015.html", [
     `${q}`,])
-  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
     break
 
@@ -6187,7 +6127,7 @@ if(!q) return reply(`Use ${prefix + command} text`)
 reply(mess.wait)
 maker.textpro("https://textpro.me/create-neon-light-blackpink-logo-text-effect-online-1081.html", [
     `${q}`,])
-  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
     break
 
@@ -6206,7 +6146,7 @@ teks1 = q.split("|")[0]
 teks2 = q.split("|")[1]
 maker.textpro("https://textpro.me/create-a-cool-graffiti-text-on-the-wall-1010.html", [
     `${teks1}`,`${teks2}`])
-  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
     break
 
@@ -6226,7 +6166,7 @@ teks1 = q.split("|")[0]
 teks2 = q.split("|")[1]
 maker.textpro("https://textpro.me/pornhub-style-logo-online-generator-free-977.html", [
     `${teks1}`,`${teks2}`])
-  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
     break
 
@@ -6244,7 +6184,7 @@ if(!q) return reply(`Use ${prefix + command} text`)
 reply(mess.wait)
 maker.textpro("https://textpro.me/create-blackpink-logo-style-online-1001.html", [
     `${q}`,])
-  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
     break
 
@@ -6260,7 +6200,7 @@ if(!q) return reply(`Use ${prefix + command} text`)
 reply(mess.wait)
 maker.textpro("https://textpro.me/create-impressive-glitch-text-effects-online-1027.html", [
     `${q}`,])
-  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
     break
 
@@ -6280,7 +6220,7 @@ teks1 = q.split("|")[0]
 teks2 = q.split("|")[1]
 maker.textpro("https://textpro.me/create-a-glitch-text-effect-online-free-1026.html", [
     `${teks1}`,`${teks2}`])
-  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
     break
 
@@ -6300,7 +6240,7 @@ teks1 = q.split("|")[0]
 teks2 = q.split("|")[1]
 maker.textpro("https://textpro.me/create-glitch-text-effect-style-tik-tok-983.html", [
     `${teks1}`,`${teks2}`])
-  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
     break
 
@@ -6320,7 +6260,7 @@ teks1 = q.split("|")[0]
 teks2 = q.split("|")[1]
 maker.textpro("https://textpro.me/create-space-3d-text-effect-online-985.html", [
     `${teks1}`,`${teks2}`])
-  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
     break
 
@@ -6340,7 +6280,7 @@ teks1 = q.split("|")[0]
 teks2 = q.split("|")[1]
 maker.textpro("https://textpro.me/create-lion-logo-mascot-online-938.html", [
     `${teks1}`,`${teks2}`])
-  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
     break
 
@@ -6358,7 +6298,7 @@ if(!q) return reply(`Use ${prefix + command} text`)
 reply(mess.wait)
 maker.textpro("https://textpro.me/create-3d-neon-light-text-effect-online-1028.html", [
     `${q}`,])
-  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
     break
 
@@ -6376,7 +6316,7 @@ if(!q) return reply(`Use ${prefix + command} text`)
 reply(mess.wait)
 maker.textpro("https://textpro.me/neon-text-effect-online-879.html", [
     `${q}`,])
-  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
     break
 
@@ -6394,7 +6334,7 @@ if(!q) return reply(`Use ${prefix + command} text`)
 reply(mess.wait)
 maker.textpro("https://textpro.me/green-neon-text-effect-874.html", [
     `${q}`,])
-  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
     break
 
@@ -6412,7 +6352,7 @@ if(!q) return reply(`Use ${prefix + command} text`)
 reply(mess.wait)
 maker.textpro("https://textpro.me/bokeh-text-effect-876.html", [
     `${q}`,])
-  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
     break
 
@@ -6430,7 +6370,7 @@ if(!q) return reply(`Use ${prefix + command} text`)
 reply(mess.wait)
 maker.textpro("https://textpro.me/holographic-3d-text-effect-975.html", [
     `${q}`,])
-  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
     break
 
@@ -6450,7 +6390,7 @@ teks1 = q.split("|")[0]
 teks2 = q.split("|")[1]
 maker.textpro("https://textpro.me/online-black-and-white-bear-mascot-logo-creation-1012.html", [
     `${teks1}`,`${teks2}`])
-  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
     break
 
@@ -6470,7 +6410,7 @@ teks1 = q.split("|")[0]
 teks2 = q.split("|")[1]
 maker.textpro("https://textpro.me/create-wolf-logo-galaxy-online-936.html", [
     `${teks1}`,`${teks2}`])
-  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
     break
 
@@ -6489,7 +6429,7 @@ if(!q) return reply(`Use ${prefix + command} text`)
 reply(mess.wait)
 maker.textpro("https://textpro.me/create-logo-joker-online-934.html", [
     `${q}`,])
-  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
     break
 
@@ -6506,7 +6446,7 @@ if(!q) return reply(`Use ${prefix + command} text`)
 reply(mess.wait)
 maker.textpro("https://textpro.me/dropwater-text-effect-872.html", [
     `${q}`,])
-  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
     break
 
@@ -6522,7 +6462,7 @@ if(!q) return reply(`Use ${prefix + command} text`)
 reply(mess.wait)
 maker.textpro("https://textpro.me/create-a-summer-neon-light-text-effect-online-1076.html", [
     `${q}`,])
-  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
     break
 
@@ -6538,7 +6478,7 @@ if(!q) return reply(`Use ${prefix + command} text`)
 reply(mess.wait)
 maker.textpro("https://textpro.me/neon-light-text-effect-with-galaxy-style-981.html", [
     `${q}`,])
-  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
     break
 
@@ -6554,7 +6494,7 @@ if(!q) return reply(`Use ${prefix + command} text`)
 reply(mess.wait)
 maker.textpro("https://textpro.me/ break-wall-text-effect-871.html", [
     `${q}`,])
-  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
     break
 
@@ -6570,7 +6510,7 @@ if(!q) return reply(`Use ${prefix + command} text`)
 reply(mess.wait)
 maker.textpro("https://textpro.me/natural-leaves-text-effect-931.html", [
     `${q}`,])
-  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
     break
 
@@ -6586,7 +6526,7 @@ if(!q) return reply(`Use ${prefix + command} text`)
 reply(mess.wait)
 maker.textpro("https://textpro.me/carbon-text-effect-833.html", [
     `${q}`,])
-  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
     break
 
@@ -6602,7 +6542,7 @@ if(!q) return reply(`Use ${prefix + command} text`)
 reply(mess.wait)
 maker.textpro("https://textpro.me/create-a-sketch-text-effect-online-1044.html", [
     `${q}`,])
-  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: lang.madeby+` ${global.botname}` }, { quoted: m }))
+  .then((data) => AlienAlfa.sendMessage(m.chat, { image: { url: data }, caption: madeby+` ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
     break
 
@@ -6621,7 +6561,7 @@ case 'watercolor': case 'multicolor': case 'neondevil': case 'underwater': case 
 case 'chocolate': case 'strawberry': case 'matrix': case 'blood': case 'dropwater': case 'toxic': 
 case 'lava': case 'rock': case 'bloodglas': case 'halloween': case 'darkgold': case 'joker': case 'wicker':
  case 'firework': case 'skeleton': case 'blackpink': case 'sand': case 'glue': case '1917': case 'leaves': case 'demon': {
-             if (!q) return reply(lang.example+` : ${prefix + command} ${global.ownername}`) 
+             if (!q) return reply(example+` : ${prefix + command} ${global.ownername}`) 
                 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
              reply(mess.wait)
@@ -6684,7 +6624,7 @@ if (isBanChat) return reply(mess.banChat)
              if (/1917/.test(command)) link = 'https://textpro.me/1917-style-text-effect-online-980.html'
                 if (/leaves/.test(command)) link = 'https://textpro.me/natural-leaves-text-effect-931.html'           
              let anu = await maker.textpro(link, q)
-                AlienAlfa.sendMessage(m.chat, { image: { url: anu }, caption: lang.madeby+` ${global.botname}` }, { quoted: m })
+                AlienAlfa.sendMessage(m.chat, { image: { url: anu }, caption: madeby+` ${global.botname}` }, { quoted: m })
              }
               break
 
@@ -6696,13 +6636,13 @@ if (isBanChat) return reply(mess.banChat)
 case 'textmaker': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (args.length < 1) return reply(lang.example+` :\n${prefix + command} <name>`)
+if (args.length < 1) return reply(example+` :\n${prefix + command} <name>`)
 if (args[0] === 'glitch') {
-if (args.length < 2) return reply(lang.example+` :\n${prefix + command + ' ' + args[0]} ${global.ownername}`)
+if (args.length < 2) return reply(example+` :\n${prefix + command + ' ' + args[0]} ${global.ownername}`)
 let teds = await thiccysapi.textpro("https://textpro.me/create-impressive-glitch-text-effects-online-1027.html", [args[1]])
 AlienAlfa.sendMessage(from, {image:{url:teds}, caption:"Done!"}, {quoted:m})
 } else if (args[0] === 'glow') {
-if (args.length < 2) return reply(lang.example+` :\n${prefix + command + ' ' + args[0]} ${global.ownername}`)
+if (args.length < 2) return reply(example+` :\n${prefix + command + ' ' + args[0]} ${global.ownername}`)
 let teds = await thiccysapi.textpro("https://textpro.me/create-light-glow-sliced-text-effect-online-1068.html", [args[1]])
 AlienAlfa.sendMessage(from, {image:{url:teds}, caption:"Done!"}, {quoted:m})
 } else {
@@ -6721,9 +6661,9 @@ if (isBan) return reply(mess.ban)
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/horror-blood-text-effect-online-883.html`
      let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -6736,9 +6676,9 @@ if (isBanChat) return reply(mess.banChat)
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/online-black-and-white-bear-mascot-logo-creation-1012.html`
      let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -6751,9 +6691,9 @@ case 'thunder2':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/create-thunder-text-effect-online-881.html`
      let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -6766,9 +6706,9 @@ case 'blackpink':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/create-blackpink-logo-style-online-1001.html`
      let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -6781,9 +6721,9 @@ case 'neon':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/neon-light-text-effect-online-882.html`
      let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -6796,9 +6736,9 @@ case 'matrix2':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/matrix-style-text-effect-online-884.html`
      let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -6811,9 +6751,9 @@ case 'sky':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/create-a-cloud-text-effect-on-the-sky-online-1004.html`
      let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -6827,9 +6767,9 @@ case 'magma':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/create-a-magma-hot-text-effect-online-1030.html`
      let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -6842,9 +6782,9 @@ case 'sand':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/sand-writing-text-effect-online-990.html`
      let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -6857,9 +6797,9 @@ case 'pencil':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/create-a-sketch-text-effect-online-1044.html`
      let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -6872,9 +6812,9 @@ case 'graffiti':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/create-wonderful-graffiti-art-text-effect-1011.html`
      let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -6887,9 +6827,9 @@ case 'metallic':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/create-a-metallic-text-effect-free-online-1041.html`
      let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -6902,9 +6842,9 @@ case 'steel':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/steel-text-effect-online-921.html`
      let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -6917,9 +6857,9 @@ case 'harrypotter':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/create-harry-potter-text-effect-online-1025.html`
      let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -6932,9 +6872,9 @@ case 'underwater':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/3d-underwater-text-effect-generator-online-1013.html`
      let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -6947,9 +6887,9 @@ case 'luxury':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/3d-luxury-gold-text-effect-online-1003.html`
      let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -6962,9 +6902,9 @@ case 'glue2':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/create-3d-glue-text-effect-with-realistic-style-986.html`
      let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -6977,9 +6917,9 @@ case 'fabric':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/fabric-text-effect-online-964.html`
      let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -6992,9 +6932,9 @@ case 'neonlight':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/neon-light-glitch-text-generator-online-1063.html`
      let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -7007,9 +6947,9 @@ case 'lava':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/lava-text-effect-online-914.html`
      let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -7022,9 +6962,9 @@ case 'toxic':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/toxic-text-effect-online-901.html`
      let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -7037,9 +6977,9 @@ case 'ancient':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/3d-golden-ancient-text-effect-online-free-1060.html`
      let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -7052,9 +6992,9 @@ case 'christmas2':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/sparkles-merry-christmas-text-effect-1054.html`
      let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -7067,9 +7007,9 @@ case 'sci_fi':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/create-3d-sci-fi-text-effect-online-1050.html`
      let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -7082,9 +7022,9 @@ case 'rainbow':{
 if (isBanChat) return reply(mess.banChat)
      let link = `https://textpro.me/3d-rainbow-color-calligraphy-text-effect-1049.html`
      let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -7097,9 +7037,9 @@ case 'classic':{
 if (isBanChat) return reply(mess.banChat)
 let link = `https://textpro.me/video-game-classic-8-bit-text-effect-1037.html`
 let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -7112,9 +7052,9 @@ case 'watercolor2':{
 if (isBanChat) return reply(mess.banChat)
 let link = `https://textpro.me/create-a-free-online-watercolor-text-effect-1017.html`
 let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -7127,9 +7067,9 @@ case 'halloween2':{
 if (isBanChat) return reply(mess.banChat)
 let link = `https://textpro.me/create-a-spooky-halloween-text-effect-online-1046.html`
 let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -7142,9 +7082,9 @@ case 'halloweenfire':{
 if (isBanChat) return reply(mess.banChat)
 let link = `https://textpro.me/halloween-fire-text-effect-940.html`
 let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -7157,9 +7097,9 @@ case 'writing':{
 if (isBanChat) return reply(mess.banChat)
 let link = `https://textpro.me/sand-writing-text-effect-online-990.html`
 let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -7172,9 +7112,9 @@ case 'foggy':{
 if (isBanChat) return reply(mess.banChat)
 let link = `https://textpro.me/write-text-on-foggy-window-online-free-1015.html`
 let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -7187,9 +7127,9 @@ case 'marvel':{
 if (isBanChat) return reply(mess.banChat)
 let link = `https://textpro.me/create-logo-style-marvel-studios-ver-metal-972.html`
 let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -7202,9 +7142,9 @@ case 'skeleton2':{
 if (isBanChat) return reply(mess.banChat)
 let link = `https://textpro.me/create-halloween-skeleton-text-effect-online-1047.html`
 let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -7217,9 +7157,9 @@ case 'sketch':{
 if (isBanChat) return reply(mess.banChat)
 let link = `https://textpro.me/create-a-sketch-text-effect-online-1044.html`
 let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -7232,9 +7172,9 @@ case 'wonderful':{
 if (isBanChat) return reply(mess.banChat)
 let link = `https://textpro.me/create-wonderful-graffiti-art-text-effect-1011.html`
 let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -7247,9 +7187,9 @@ case 'cool':{
 if (isBanChat) return reply(mess.banChat)
 let link = `https://textpro.me/create-a-cool-graffiti-text-on-the-wall-1010.html`
 let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -7262,9 +7202,9 @@ case 'collwall':{
 if (isBanChat) return reply(mess.banChat)
 let link = `https://textpro.me/create-cool-wall-graffiti-text-effect-online-1009.html`
 let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -7277,9 +7217,9 @@ case 'multicolor2':{
 if (isBanChat) return reply(mess.banChat)
 let link = `https://textpro.me/online-multicolor-3d-paper-cut-text-effect-1016.html`
 let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -7292,9 +7232,9 @@ case 'batman':{
 if (isBanChat) return reply(mess.banChat)
 let link = `https://textpro.me/make-a-batman-logo-online-free-1066.html`
 let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -7307,9 +7247,9 @@ case 'juice':{
 if (isBanChat) return reply(mess.banChat)
 let link = `https://textpro.me/fruit-juice-text-effect-861.html`
 let anui = await textpro(link, q)
-     reply(lang.waitamin) 
+     reply(waitamin) 
      console.log(anui)
-    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:lang.takeresult}, {quoted:m})
+    AlienAlfa.sendMessage(from, {image:{url:anui}, caption:takeresult}, {quoted:m})
 }
     break
 
@@ -7320,7 +7260,7 @@ let anui = await textpro(link, q)
 case 'pornhub':{
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if(!q) return reply(lang.example+`: ${prefix + command} ajg | ea`)
+if(!q) return reply(example+`: ${prefix + command} ajg | ea`)
 reply(mess.wait)
   inilogo4 = args.join(" ")
 inilogo9 = args.join(" ")
@@ -7328,7 +7268,7 @@ inilogo9 = args.join(" ")
 var logo9 = inilogo9.split('|')[1]
     let anu = await textpro("https://textpro.me/pornhub-style-logo-online-generator-free-977.html", [`${logo4}`,`${logo9}`])
 console.log(anu)
-AlienAlfa.sendMessage(from,{image:{url:anu}, caption:lang.takeresult},{quoted:m})
+AlienAlfa.sendMessage(from,{image:{url:anu}, caption:takeresult},{quoted:m})
 }
  break
 
@@ -7339,7 +7279,7 @@ AlienAlfa.sendMessage(from,{image:{url:anu}, caption:lang.takeresult},{quoted:m}
 case 'retro':{
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if(!q) return reply(lang.example+`: ${prefix + command} ajg | ea`)
+if(!q) return reply(example+`: ${prefix + command} ajg | ea`)
 reply(mess.wait)
   inilogo4 = args.join(" ")
 inilogo9 = args.join(" ")
@@ -7347,7 +7287,7 @@ inilogo9 = args.join(" ")
 var logo9 = inilogo9.split('|')[1]
     let anu = await textpro("https://textpro.me/create-3d-retro-text-effect-online-free-1065.html", [`${logo4}`,`${logo9}`])
 console.log(anu)
-AlienAlfa.sendMessage(from,{image:{url:anu}, caption:lang.takeresult},{quoted:m})
+AlienAlfa.sendMessage(from,{image:{url:anu}, caption:takeresult},{quoted:m})
 }
  break
 
@@ -7358,7 +7298,7 @@ AlienAlfa.sendMessage(from,{image:{url:anu}, caption:lang.takeresult},{quoted:m}
 case 'horror':{
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if(!q) return reply(lang.example+`: ${prefix + command} ajg | ea`)
+if(!q) return reply(example+`: ${prefix + command} ajg | ea`)
 reply(mess.wait)
   inilogo4 = args.join(" ")
 inilogo9 = args.join(" ")
@@ -7366,7 +7306,7 @@ inilogo9 = args.join(" ")
 var logo9 = inilogo9.split('|')[1]
     let anu = await textpro("https://textpro.me/create-a-cinematic-horror-text-effect-1045.html", [`${logo4}`,`${logo9}`])
 console.log(anu)
-AlienAlfa.sendMessage(from,{image:{url:anu}, caption:lang.takeresult},{quoted:m})
+AlienAlfa.sendMessage(from,{image:{url:anu}, caption:takeresult},{quoted:m})
 }
  break
 
@@ -7377,7 +7317,7 @@ AlienAlfa.sendMessage(from,{image:{url:anu}, caption:lang.takeresult},{quoted:m}
 case '8bit':{
 	if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if(!q) return reply(lang.example+`: ${prefix + command} ajg | ea`)
+if(!q) return reply(example+`: ${prefix + command} ajg | ea`)
 reply(mess.wait)
   inilogo4 = args.join(" ")
 inilogo9 = args.join(" ")
@@ -7385,7 +7325,7 @@ inilogo9 = args.join(" ")
 var logo9 = inilogo9.split('|')[1]
     let anu = await textpro("https://textpro.me/video-game-classic-8-bit-text-effect-1037.html", [`${logo4}`,`${logo9}`])
 console.log(anu)
-AlienAlfa.sendMessage(from,{image:{url:anu}, caption:lang.takeresult},{quoted:m})
+AlienAlfa.sendMessage(from,{image:{url:anu}, caption:takeresult},{quoted:m})
 }
  break
 
@@ -7398,7 +7338,7 @@ case 'emoji': {
 if (isBanChat) return reply(mess.banChat)
 if (!args.join(" ")) return reply('Where is the emoji?')
 emoji.get(args.join(" ")).then(async(emoji) => {
-let mese = await AlienAlfa.sendMessage(m.chat, {image:{url:emoji.images[4].url}, caption: lang.madeby+` ${global.botname}`}, {quoted:m})
+let mese = await AlienAlfa.sendMessage(m.chat, {image:{url:emoji.images[4].url}, caption: madeby+` ${global.botname}`}, {quoted:m})
 await AlienAlfa.sendMessage(from, {text:"reply #s to this image to make sticker"}, {quoted:mese})
 })
 }
@@ -7425,7 +7365,7 @@ emote(q, "11")
 case 'iphoneemoji': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!q) return reply(lang.emojiz)
+if (!q) return reply(emojiz)
 reply(mess.wait)
 emote(q, "0")
  break
@@ -7437,7 +7377,7 @@ emote(q, "0")
 case 'googleemoji': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!q) return reply(lang.emojiz)
+if (!q) return reply(emojiz)
 reply(mess.wait)
 emote(q, "1")
  break
@@ -7449,7 +7389,7 @@ emote(q, "1")
 case 'samsungemoji': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!q) return reply(lang.emojiz)
+if (!q) return reply(emojiz)
 reply(mess.wait)
 emote(q, "2")
  break
@@ -7461,7 +7401,7 @@ emote(q, "2")
 case 'microsoftemoji': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!q) return reply(lang.emojiz)
+if (!q) return reply(emojiz)
 reply(mess.wait)
 emote(q, "3")
  break
@@ -7473,7 +7413,7 @@ emote(q, "3")
 case 'whatsappemoji': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!q) return reply(lang.emojiz)
+if (!q) return reply(emojiz)
 reply(mess.wait)
 emote(q, "4")
  break
@@ -7485,7 +7425,7 @@ emote(q, "4")
 case 'twitteremoji': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!q) return reply(lang.emojiz)
+if (!q) return reply(emojiz)
 reply(mess.wait)
 emote(q, "5")
  break
@@ -7498,7 +7438,7 @@ case 'facebookemoji':
 case 'fbemoji': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!q) return reply(lang.emojiz)
+if (!q) return reply(emojiz)
 reply(mess.wait)
 emote(q, "6")
  break
@@ -7510,7 +7450,7 @@ emote(q, "6")
 case 'skypeemoji': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!q) return reply(lang.emojiz)
+if (!q) return reply(emojiz)
 reply(mess.wait)
 emote(q, "7")
  break
@@ -7522,7 +7462,7 @@ emote(q, "7")
 case 'joyemoji': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!q) return reply(lang.emojiz)
+if (!q) return reply(emojiz)
 reply(mess.wait)
 emote(q, "8")
  break
@@ -7534,13 +7474,13 @@ emote(q, "8")
 case 'mojiemoji': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!q) return reply(lang.emojiz)
+if (!q) return reply(emojiz)
 reply(mess.wait)
 emote(q, "9")
 case 'pediaemoji': 
 if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!q) return reply(lang.emojiz)
+if (!q) return reply(emojiz)
 reply(mess.wait)
 emote(q, "10")
  break
@@ -7699,9 +7639,9 @@ await fs.unlinkSync(media)
 
 
             case 'imagenobgxxx': case 'removebgxxx': case 'remove-bgxxx': {
-	    if (!quoted) return replay(lang.replycaption)
-	    if (!/image/.test(mime)) return replay(lang.replycaption)
-	    if (/webp/.test(mime)) return replay(lang.replycaption)
+	    if (!quoted) return replay(replycaption)
+	    if (!/image/.test(mime)) return replay(replycaption)
+	    if (/webp/.test(mime)) return replay(replycaption)
 	    let remobg = require('remove.bg')
 	    let apirnobg = ['q61faXzzR5zNU6cvcrwtUkRU','S258diZhcuFJooAtHTaPEn4T','5LjfCVAp4vVNYiTjq9mXJWHF','aT7ibfUsGSwFyjaPZ9eoJc61','BY63t7Vx2tS68YZFY6AJ4HHF','5Gdq1sSWSeyZzPMHqz7ENfi8','86h6d6u4AXrst4BVMD9dzdGZ','xp8pSDavAgfE5XScqXo9UKHF','dWbCoCb3TacCP93imNEcPxcL']
 	    let apinobg = apirnobg[Math.floor(Math.random() * apirnobg.length)]
@@ -7731,7 +7671,7 @@ await fs.unlinkSync(media)
 	case 'yts': case 'ytsearch': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!args.join(" ")) return replay(lang.example+` : ${prefix + command} stay jb`)
+if (!args.join(" ")) return replay(example+` : ${prefix + command} stay jb`)
 let yts = require("yt-search")
 let search = await yts(args.join(" "))
 let teks = '*| YOUTUBE SEARCH |*\n\n Result From '+text+'\n\n'
@@ -7750,7 +7690,7 @@ AlienAlfa.sendMessage(m.chat, { image: { url: search.all[0].thumbnail },  captio
 case 'google': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!args[0]) return reply(lang.example+`: ${prefix + command} <query>\nUses : ${prefix + command} apa arti cinta`)
+if (!args[0]) return reply(example+`: ${prefix + command} <query>\nUses : ${prefix + command} apa arti cinta`)
 let google = require('google-it')
 google({'query': args.join(" ")}).then(res => {
 let teks = `Google Search From : ${text}\n\n`
@@ -7809,7 +7749,7 @@ AlienAlfa.sendMessage(m.chat, buttonMessage, { quoted: m })
 	case 'igstoryxx': case 'instagramstoryxx': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!args[0]) return reply(lang.example+` :\n${prefix + command} alienalfa`)
+if (!args[0]) return reply(example+` :\n${prefix + command} alienalfa`)
 try {
 hx.igstory(args[0]).then(async(resed) => {
 ini_anu = []
@@ -7904,7 +7844,7 @@ case 'ig2': case 'igdl2': case 'instagram2': {
 case 'igdl': case 'instagram': case 'instagramreels': case 'igreels': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!args[0]) return reply(lang.example+` :\n${prefix + command} https://www.instagram.com/p/CcvJGuxh9VI/?igshid=YmMyMTA2M2Y=`)
+if (!args[0]) return reply(example+` :\n${prefix + command} https://www.instagram.com/p/CcvJGuxh9VI/?igshid=YmMyMTA2M2Y=`)
 try {
 hx.igdl(args[0]).then(async(resed) => {
 ini_anu = []
@@ -7951,7 +7891,7 @@ AlienAlfa.sendMessage(from, {video:{url:args[1]}, caption:'Done!', mimetype:'vid
 } else if (args[0] === "jpg") {
 AlienAlfa.sendMessage(from, {image:{url:args[1]}, caption:'Done!'}, {quoted:m})
 } else {
-reply(lang.mainerr)
+reply(mainerr)
 }
 }
  break
@@ -7974,7 +7914,7 @@ mediaUrl: `${global.websitex}`,
 sourceUrl: `${global.websitex}`
 }}}, {quoted:m})
 } catch {
-reply(lang.linkerr)
+reply(linkerr)
 }
 }
  break
@@ -8011,7 +7951,7 @@ case 'igtv': {
 if (isBanChat) return reply(mess.banChat)
                 if (!text) return reply(`Where is the link boss?`)
                 const { instagramdl, instagramdlv2, instagramdlv3 } = require('@bochilteam/scraper')
-                if (!isUrl(args[0]) && !args[0].includes('instagram.com')) return reply(lang.invalidlink)
+                if (!isUrl(args[0]) && !args[0].includes('instagram.com')) return reply(invalidlink)
                 instagramdlv3(`${text}`).then(async (data) => {            
                 var buf = await getBuffer(data[0].thumbnail)        
                 AlienAlfa.sendMessage(m.chat, { video: { url: data[0].url }, jpegThumbnail:buf, caption: `${botname}`}, { quoted: m })
@@ -8029,7 +7969,7 @@ if (isBanChat) return reply(mess.banChat)
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)	             
              if (!text) return reply(`Where is the link?`)
-                if (!isUrl(args[0]) && !args[0].includes('twitter.com')) return reply(lang.invalidlink)
+                if (!isUrl(args[0]) && !args[0].includes('twitter.com')) return reply(invalidlink)
                 farrkey.Twitter(`${text}`).then(async (data) => {                    
                     let txt = `*TWITTER DOWNLOADER*\n\n`
                     txt += `*${themeemoji}TITLE :* ${data.title}\n`
@@ -8058,7 +7998,7 @@ if (isBanChat) return reply(mess.banChat)
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)	             
              if (!text) return reply(`Where is the link?`)
-                if (!isUrl(args[0]) && !args[0].includes('twitter.com')) return reply(lang.invalidlink)
+                if (!isUrl(args[0]) && !args[0].includes('twitter.com')) return reply(invalidlink)
                 farrkey.Twitter(`${text}`).then(async (data) => {
                 AlienAlfa.sendMessage(m.chat, { audio: { url: data.medias[1].url }, mimetype: 'audio/mp4'}, { quoted: m })
                 }).catch((err) => {
@@ -8074,7 +8014,7 @@ if (isBanChat) return reply(mess.banChat)
 case 'twitterxx': case 'twdlxx': case 'twmp4xx': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!args[0]) return reply(lang.example+` :\n${prefix + command} https://twitter.com/cinema21/status/1517754155644821504?t=rUnbyqwh4vAE1QXMXlsVeQ&s=19`)
+if (!args[0]) return reply(example+` :\n${prefix + command} https://twitter.com/cinema21/status/1517754155644821504?t=rUnbyqwh4vAE1QXMXlsVeQ&s=19`)
 try {
 let lotwit = await aiovideodl(args[0])
 teks = `*| TWITTER DOWNLOADER |*
@@ -8148,7 +8088,7 @@ case 'fbdl': case 'fb': case 'facebook': case 'fbmp4': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
              if (!text) return reply(`Where is the link bro?\nExample: ${prefix}facebook https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
-                if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(lang.invalidlink)
+                if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(invalidlink)
             let bocil = require('@bochilteam/scraper')  
                 bocil.facebookdlv2(`${text}`).then(async (data) => {                   
                     let txt = `*FB DOWNLOADER*\n\n`
@@ -8176,7 +8116,7 @@ if (isBanChat) return reply(mess.banChat)
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
                   if (!text) return reply(`Where is the link?\nExample: ${prefix + command} https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
-                  if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(lang.invalidlink)
+                  if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(invalidlink)
   let noh = require('@bochilteam/scraper')                
   noh.savefrom(`${text}`).then(async (anu) => {  
   AlienAlfa.sendMessage(m.chat, { audio: { url: anu.url[0].url }, mimetype: 'audio/mp4' }, { quoted: m })      
@@ -8193,7 +8133,7 @@ if (isBanChat) return reply(mess.banChat)
 case 'facebookxx': case 'fbdlxxx': case 'fbmp4xxx': case 'fbxxx': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!args[0]) return reply(lang.example+` :\n${prefix + command} https://fb.watch/cAX2dep-BZ/`)
+if (!args[0]) return reply(example+` :\n${prefix + command} https://fb.watch/cAX2dep-BZ/`)
 try {
 let resd = await aiovideodl(args[0])
 teks = `*| FACEBOOK DOWNLOADER |*
@@ -8304,7 +8244,7 @@ if (isBanChat) return reply(mess.banChat)
             case 'wattpad': {
             	            	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-            if (!text) return reply(lang.example+` : ${prefix + command} love`)
+            if (!text) return reply(example+` : ${prefix + command} love`)
             let res = await fetchJson(`https://zenzapis.xyz/webzone/wattpad?query=$text}&apikey=hdiiofficial`)
             let { judul, dibaca, divote, bab, waktu, url, thumb, description } = res.result[0]
             let capt = `Wattpad From query\n\n`
@@ -8425,7 +8365,7 @@ case 'lava': case 'rock': case 'bloodglas': case 'hallowen': case 'darkgold': ca
  case 'firework': case 'skeleton': case 'blackpink': case 'sand': case 'glue': case '1917': case 'leaves': {
  	   if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-              if (!q) return reply(lang.example+` : ${prefix + command} ${global.ownername}`) 
+              if (!q) return reply(example+` : ${prefix + command} ${global.ownername}`) 
           
              let link
              if (/candy/.test(command)) link = 'https://textpro.me/create-christmas-candy-cane-text-effect-1056.html'
@@ -8486,7 +8426,7 @@ if (isBanChat) return reply(mess.banChat)
              if (/1917/.test(command)) link = 'https://textpro.me/1917-style-text-effect-online-980.html'
                 if (/leaves/.test(command)) link = 'https://textpro.me/natural-leaves-text-effect-931.html'
              let anu = await maker.textpro(link, q)
-                AlienAlfa.sendMessage(m.chat, { image: { url: anu }, caption: lang.madeby+` ${global.botname},For my Darling ` }, { quoted: m })
+                AlienAlfa.sendMessage(m.chat, { image: { url: anu }, caption: madeby+` ${global.botname},For my Darling ` }, { quoted: m })
              }
               break
 
@@ -8521,7 +8461,7 @@ if (isBanChat) return reply(mess.banChat)
             case 'drakor': {
             	            	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-            if (!text) return reply(lang.example+` : ${prefix + command} love`)
+            if (!text) return reply(example+` : ${prefix + command} love`)
             let res = await fetchJson(`https://zenzapis.xyz/webzone/drakor?query=${text}&apikey=hdiiofficial`)
             let capt = `Drakor Search From : ${text}\n\n`
             for (let i of res.result) {
@@ -8837,7 +8777,7 @@ case 'image': {
 case 'mcserver': case 'mcquery': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!args.join(" ")) return replay(lang.example+` : \n${prefix + command} ip|port\nUses : \n${prefix + command} play.music.com|19132`)
+if (!args.join(" ")) return replay(example+` : \n${prefix + command} ip|port\nUses : \n${prefix + command} play.music.com|19132`)
 const Query = require("minecraft-query");
 
 const qury = args.join(" ")
@@ -8868,7 +8808,7 @@ q.close();
 case 'mcpedl': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!args.join(" ")) return replay(lang.example+` : ${prefix + command} shader`)
+if (!args.join(" ")) return replay(example+` : ${prefix + command} shader`)
 tod.mcpedl(args.join(" ")).then(async(res) => {
 teks = `*| MCPEDL SEARCH |*`
 for (let i of res) {
@@ -8897,7 +8837,7 @@ AlienAlfa.sendMessage(m.chat, buttonMessage, { quoted: m })
 case 'happymod': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!args.join(" ")) return replay(lang.example+` : ${prefix + command} mobile legend`)
+if (!args.join(" ")) return replay(example+` : ${prefix + command} mobile legend`)
 tod.happymod(args.join(" ")).then(async(res) => {
 teks = '```「 HappyMod Search 」```'
 for (let i of res) {
@@ -8927,7 +8867,7 @@ AlienAlfa.sendMessage(m.chat, buttonMessage, { quoted: m })
 case 'searchgc': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (args.length < 1) return replay(lang.example+` :\n${prefix}searchgc Classy Editor`)
+if (args.length < 1) return replay(example+` :\n${prefix}searchgc Classy Editor`)
 nae = args.join(" ")
 hx.linkwa(nae).then(res => {
 teks = '```「 Search Group 」```'
@@ -9412,7 +9352,7 @@ AlienAlfa.sendMessage(m.chat, { image : { url : res }, caption: teks }, { quoted
             case 'cinemaschedule': {
             	            	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-            if (!text) return reply(lang.example+`: ${prefix + command} jakarta`)
+            if (!text) return reply(example+`: ${prefix + command} jakarta`)
             let res = await fetchJson(`https://zenzapis.xyz/webzone/jadwalbioskop?kota=${text}&apikey=hdiiofficial`)
             let capt = `Jadwal Bioskop From : ${text}\n\n`
             for (let i of res.result){
@@ -9547,7 +9487,7 @@ if (isBanChat) return reply(mess.banChat)
                 anu = await wallpaper(args)
                 result = anu[Math.floor(Math.random() * anu.length)]
 		let buttons = [
-                    {buttonId: `.wallpaper ${args.join(" ")}`, buttonText: {displayText: lang.textNext}, type: 1}
+                    {buttonId: `.wallpaper ${args.join(" ")}`, buttonText: {displayText: textNext}, type: 1}
                 ]
                 let buttonMessage = {
                     image: { url: result.image[0] },
@@ -9588,7 +9528,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
                 anu = await wikimedia(text)
                 result = anu[Math.floor(Math.random() * anu.length)]
                 let buttons = [
-                    {buttonId: `wikimedia ${text}`, buttonText: {displayText: lang.textNext}, type: 1}
+                    {buttonId: `wikimedia ${text}`, buttonText: {displayText: textNext}, type: 1}
                 ]
                 let buttonMessage = {
                     image: { url: result.image },
@@ -9612,7 +9552,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
                 let anu = await quotesAnime()
                 result = anu[Math.floor(Math.random() * anu.length)]
                 let buttons = [
-                    {buttonId: `quotesanime`, buttonText: {displayText: lang.textNext}, type: 1}
+                    {buttonId: `quotesanime`, buttonText: {displayText: textNext}, type: 1}
                 ]
                 let buttonMessage = {
                     text: `~_${result.quotes}_\n\nBy '${result.karakter}', ${result.anime}\n\n- ${result.up_at}`,
@@ -9631,7 +9571,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
 	        case 'nomerhoki': case 'nomorhoki': {
 			   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!Number(text)) return reply(lang.example+` : ${prefix + command} 447405935355`)
+                if (!Number(text)) return reply(example+` : ${prefix + command} 447405935355`)
                 let anu = await primbon.nomer_hoki(Number(text))
                 if (anu.status == false) return reply(anu.message)
                 AlienAlfa.sendText(m.chat, `${themeemoji} *Phone Number :* ${anu.message.nomer_hp}\n${themeemoji} *Shuzi Angka Figures :* ${anu.message.angka_shuzi}\n${themeemoji} *Positive Energy :*\n- Riches : ${anu.message.energi_positif.kekayaan}\n- Health : ${anu.message.energi_positif.kesehatan}\n- Love : ${anu.message.energi_positif.cinta}\n- Stability : ${anu.message.energi_positif.kestabilan}\n- Percentage : ${anu.message.energi_positif.persentase}\n${themeemoji} *Negative Energy :*\n- Dispute : ${anu.message.energi_negatif.perselisihan}\n- Lost : ${anu.message.energi_negatif.kehilangan}\n- Catastrophe : ${anu.message.energi_negatif.malapetaka}\n- Destruction : ${anu.message.energi_negatif.kehancuran}\n- Percentage : ${anu.message.energi_negatif.persentase}`, m)
@@ -9645,7 +9585,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
             case 'artimimpi': case 'tafsirmimpi': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(lang.example+` : ${prefix + command} belanja`)
+                if (!text) return reply(example+` : ${prefix + command} belanja`)
                 let anu = await primbon.tafsir_mimpi(text)
                 if (anu.status == false) return reply(anu.message)
                 AlienAlfa.sendText(m.chat, `${themeemoji} *Dream :* ${anu.message.mimpi}\n${themeemoji} *Meaning :* ${anu.message.arti}\n${themeemoji} *Solution :* ${anu.message.solusi}`, m)
@@ -9659,7 +9599,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
             case 'ramalanjodoh': case 'ramaljodoh': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(lang.example+` : ${prefix + command} Dika, 7, 7, 2005, Novia, 16, 11, 2004`)
+                if (!text) return reply(example+` : ${prefix + command} Dika, 7, 7, 2005, Novia, 16, 11, 2004`)
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.ramalan_jodoh(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
                 if (anu.status == false) return reply(anu.message)
@@ -9674,7 +9614,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
             case 'ramalanjodohbali': case 'ramaljodohbali': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(lang.example+` : ${prefix + command} Dika, 7, 7, 2005, Novia, 16, 11, 2004`)
+                if (!text) return reply(example+` : ${prefix + command} Dika, 7, 7, 2005, Novia, 16, 11, 2004`)
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.ramalan_jodoh_bali(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
                 if (anu.status == false) return reply(anu.message)
@@ -9689,7 +9629,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
             case 'suamiistri': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(lang.example+` : ${prefix + command} Dika, 7, 7, 2005, Novia, 16, 11, 2004`)
+                if (!text) return reply(example+` : ${prefix + command} Dika, 7, 7, 2005, Novia, 16, 11, 2004`)
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.suami_istri(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
                 if (anu.status == false) return reply(anu.message)
@@ -9704,7 +9644,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
             case 'ramalancinta': case 'ramalcinta': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(lang.example+` : ${prefix + command} Dika, 7, 7, 2005, Novia, 16, 11, 2004`)
+                if (!text) return reply(example+` : ${prefix + command} Dika, 7, 7, 2005, Novia, 16, 11, 2004`)
                 let [nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2] = text.split`,`
                 let anu = await primbon.ramalan_cinta(nama1, tgl1, bln1, thn1, nama2, tgl2, bln2, thn2)
                 if (anu.status == false) return reply(anu.message)
@@ -9719,7 +9659,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
             case 'artinama': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(lang.example+` : ${prefix + command} Dika Ardianta`)
+                if (!text) return reply(example+` : ${prefix + command} Dika Ardianta`)
                 let anu = await primbon.arti_nama(text)
                 if (anu.status == false) return reply(anu.message)
                 AlienAlfa.sendText(m.chat, `${themeemoji} *Name :* ${anu.message.nama}\n${themeemoji} *Meaning :* ${anu.message.arti}\n${themeemoji} *Notes :* ${anu.message.catatan}`, m)
@@ -9733,7 +9673,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
             case 'kecocokannama': case 'cocoknama': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(lang.example+` : ${prefix + command} Dika, 7, 7, 2005`)
+                if (!text) return reply(example+` : ${prefix + command} Dika, 7, 7, 2005`)
                 let [nama, tgl, bln, thn] = text.split`,`
                 let anu = await primbon.kecocokan_nama(nama, tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -9748,7 +9688,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
             case 'kecocokanpasangan': case 'cocokpasangan': case 'pasangan': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(lang.example+` : ${prefix + command} Dika|Novia`)
+                if (!text) return reply(example+` : ${prefix + command} Dika|Novia`)
                 let [nama1, nama2] = text.split`|`
                 let anu = await primbon.kecocokan_nama_pasangan(nama1, nama2)
                 if (anu.status == false) return reply(anu.message)
@@ -9763,7 +9703,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
             case 'jadianpernikahan': case 'jadiannikah': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(lang.example+` : ${prefix + command} 6, 12, 2020`)
+                if (!text) return reply(example+` : ${prefix + command} 6, 12, 2020`)
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.tanggal_jadian_pernikahan(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -9778,7 +9718,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
             case 'sifatusaha': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(lang.example+` : ${prefix+ command} 28, 12, 2021`)
+                if (!text) return reply(example+` : ${prefix+ command} 28, 12, 2021`)
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.sifat_usaha_bisnis(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -9793,7 +9733,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
             case 'rejeki': case 'rezeki': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(lang.example+` : ${prefix + command} 7, 7, 2005`)
+                if (!text) return reply(example+` : ${prefix + command} 7, 7, 2005`)
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.rejeki_hoki_weton(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -9808,7 +9748,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
             case 'pekerjaan': case 'kerja': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(lang.example+` : ${prefix + command} 7, 7, 2005`)
+                if (!text) return reply(example+` : ${prefix + command} 7, 7, 2005`)
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.pekerjaan_weton_lahir(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -9823,7 +9763,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
             case 'ramalannasib': case 'ramalnasib': case 'nasib': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(lang.example+` : 7, 7, 2005`)
+                if (!text) return reply(example+` : 7, 7, 2005`)
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.ramalan_nasib(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -9838,7 +9778,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
             case 'potensipenyakit': case 'penyakit': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(lang.example+` : ${prefix + command} 7, 7, 2005`)
+                if (!text) return reply(example+` : ${prefix + command} 7, 7, 2005`)
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.cek_potensi_penyakit(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -9853,7 +9793,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
             case 'artitarot': case 'tarot': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(lang.example+` : ${prefix + command} 7, 7, 2005`)
+                if (!text) return reply(example+` : ${prefix + command} 7, 7, 2005`)
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.arti_kartu_tarot(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -9868,7 +9808,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
             case 'fengshui': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(lang.example+` : ${prefix + command} Dika, 1, 2005\n\nNote : ${prefix + command} Name, gender, tahun lahir\nGender : 1 untuk laki-laki & 2 untuk perempuan`)
+                if (!text) return reply(example+` : ${prefix + command} Dika, 1, 2005\n\nNote : ${prefix + command} Name, gender, tahun lahir\nGender : 1 untuk laki-laki & 2 untuk perempuan`)
                 let [nama, gender, tahun] = text.split`,`
                 let anu = await primbon.perhitungan_feng_shui(nama, gender, tahun)
                 if (anu.status == false) return reply(anu.message)
@@ -9883,7 +9823,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
             case 'haribaik': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(lang.example+` : ${prefix + command} 7, 7, 2005`)
+                if (!text) return reply(example+` : ${prefix + command} 7, 7, 2005`)
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.petung_hari_baik(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -9898,7 +9838,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
             case 'harisangar': case 'taliwangke': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(lang.example+` : ${prefix + command} 7, 7, 2005`)
+                if (!text) return reply(example+` : ${prefix + command} 7, 7, 2005`)
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.hari_sangar_taliwangke(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -9911,7 +9851,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
 
 
             case 'harinaas': case 'harisial': {
-                if (!text) return reply(lang.example+` : ${prefix + command} 7, 7, 2005`)
+                if (!text) return reply(example+` : ${prefix + command} 7, 7, 2005`)
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.primbon_hari_naas(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -9926,7 +9866,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
             case 'nagahari': case 'harinaga': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(lang.example+` : ${prefix + command} 7, 7, 2005`)
+                if (!text) return reply(example+` : ${prefix + command} 7, 7, 2005`)
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.rahasia_naga_hari(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -9941,7 +9881,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
             case 'arahrejeki': case 'arahrezeki': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(lang.example+` : ${prefix + command} 7, 7, 2005`)
+                if (!text) return reply(example+` : ${prefix + command} 7, 7, 2005`)
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.primbon_arah_rejeki(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -9956,7 +9896,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
             case 'peruntungan': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(lang.example+` : ${prefix + command} DIka, 7, 7, 2005, 2022\n\nNote : ${prefix + command} Name, tanggal lahir, bulan lahir, tahun lahir, untuk tahun`)
+                if (!text) return reply(example+` : ${prefix + command} DIka, 7, 7, 2005, 2022\n\nNote : ${prefix + command} Name, tanggal lahir, bulan lahir, tahun lahir, untuk tahun`)
                 let [nama, tgl, bln, thn, untuk] = text.split`,`
                 let anu = await primbon.ramalan_peruntungan(nama, tgl, bln, thn, untuk)
                 if (anu.status == false) return reply(anu.message)
@@ -9971,7 +9911,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
             case 'weton': case 'wetonjawa': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return (lang.example+` : ${prefix + command} 7, 7, 2005`)
+                if (!text) return (example+` : ${prefix + command} 7, 7, 2005`)
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.weton_jawa(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -9986,7 +9926,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
             case 'sifat': case 'karakter': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(lang.example+` : ${prefix + command} Dika, 7, 7, 2005`)
+                if (!text) return reply(example+` : ${prefix + command} Dika, 7, 7, 2005`)
                 let [nama, tgl, bln, thn] = text.split`,`
                 let anu = await primbon.sifat_karakter_tanggal_lahir(nama, tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -10001,7 +9941,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
             case 'keberuntungan': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(lang.example+` : ${prefix + command} Dika, 7, 7, 2005`)
+                if (!text) return reply(example+` : ${prefix + command} Dika, 7, 7, 2005`)
                 let [nama, tgl, bln, thn] = text.split`,`
                 let anu = await primbon.potensi_keberuntungan(nama, tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -10016,7 +9956,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
             case 'memancing': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(lang.example+` : ${prefix + command} 12, 1, 2022`)
+                if (!text) return reply(example+` : ${prefix + command} 12, 1, 2022`)
                 let [tgl, bln, thn] = text.split`,`
                 let anu = await primbon.primbon_memancing_ikan(tgl, bln, thn)
                 if (anu.status == false) return reply(anu.message)
@@ -10031,7 +9971,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
             case 'masasubur': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return (lang.example+` : ${prefix + command} 12, 1, 2022, 28\n\nNote : ${prefix + command} First Day Of Menstruation Cycle`)
+                if (!text) return (example+` : ${prefix + command} 12, 1, 2022, 28\n\nNote : ${prefix + command} First Day Of Menstruation Cycle`)
                 let [tgl, bln, thn, siklus] = text.split`,`
                 let anu = await primbon.masa_subur(tgl, bln, thn, siklus)
                 if (anu.status == false) return reply(anu.message)
@@ -10046,7 +9986,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
             case 'zodiak': case 'zodiac': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(lang.example+` : ${prefix+ command} 7 7 2005`)
+                if (!text) return reply(example+` : ${prefix+ command} 7 7 2005`)
                 let zodiak = [
                     ["capricorn", new Date(1970, 0, 1)],
                     ["aquarius", new Date(1970, 0, 20)],
@@ -10088,7 +10028,7 @@ AlienAlfa.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2
             case 'shio': {
             	   if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(lang.example+` : ${prefix + command} tikus\n\nNote : For Detail https://primbon.com/shio.htm`)
+                if (!text) return reply(example+` : ${prefix + command} tikus\n\nNote : For Detail https://primbon.com/shio.htm`)
                 let anu = await primbon.shio(text)
                 if (anu.status == false) return reply(anu.message)
                 AlienAlfa.sendText(m.chat, `${themeemoji} *Results :* ${anu.message}`, m)
@@ -10150,7 +10090,7 @@ AlienAlfa.sendMessage(from, buttonMessage, {quoted:m})
 } )
    console.log(musim_rambutan)
    const botzytiktoknowm = musim_rambutan.result.nowatermark
-    AlienAlfa.sendMessage(from, { video: { url: botzytiktoknowm }, caption: lang.takeresult }, { quoted: m })
+    AlienAlfa.sendMessage(from, { video: { url: botzytiktoknowm }, caption: takeresult }, { quoted: m })
    }
    break
 
@@ -10258,7 +10198,7 @@ sourceUrl: args[0]
 AlienAlfa.sendMessage(from, buttonMessage, {quoted:m})
 }).catch(_ => _)
 } catch {
-reply(lang.linkerr)
+reply(linkerr)
 }
 }
  break
@@ -10325,7 +10265,7 @@ case 'ytshorts': case 'shorts': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
   if (!text) return reply(`*Use ${prefix + command} put yt shorts link*`)
-  if (!isUrl(args[0]) && !args[0].includes('youtube')) return reply(lang.invalidlink)
+  if (!isUrl(args[0]) && !args[0].includes('youtube')) return reply(invalidlink)
   farrkey.Youtube(`${text}`).then(async (data) => {
   if (data.medias[0].formattedSize.split('MB')[0] >= 999) return reply('*File Over Limit* '+util.format(data)) 
   cap = `
@@ -10373,7 +10313,7 @@ sourceUrl: `${global.websitex}`
 AlienAlfa.sendMessage(m.chat, buttonMessage, { quoted: m })
 }).catch(_ => _)
 } catch {
-reply(lang.mainerr)
+reply(mainerr)
 }
 }
  break
@@ -10407,7 +10347,7 @@ AlienAlfa.sendMessage(m.chat, { document : { url : baby1[0].link}, fileName : ba
             case 'umma': case 'ummadl': {
             	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-	        if (!text) return reply(lang.example+` : ${prefix + command} https://umma.id/channel/video/post/gus-arafat-sumber-kecewa-84464612933698`)
+	        if (!text) return reply(example+` : ${prefix + command} https://umma.id/channel/video/post/gus-arafat-sumber-kecewa-84464612933698`)
                 let { umma } = require('./lib/scraper')
 		let anu = await umma(isUrl(text)[0])
 		if (anu.type == 'video') {
@@ -10459,14 +10399,14 @@ To Download Media, Please Click One Of The Buttons Below Or Enter The ytmp3/ytmp
 
 case 'tempo': {
 if (isBan) return reply(mess.ban)
-if (!args.join(" ")) return reply(lang.example+`: ${prefix + command} 10`)
+if (!args.join(" ")) return reply(example+`: ${prefix + command} 10`)
 var req = args.join(' ')
 media = await AlienAlfa.downloadAndSaveMediaMessage(quoted, "tempo")
 if (isQuotedAudio) {
 ran = getRandom('.mp3')
 exec(`ffmpeg -i ${media} -filter:a "atempo=1.0,asetrate=${req}" ${ran}`, (err, stderr, stdout) => {
 fs.unlinkSync(media)
-if (err) return reply(lang.mainerr)
+if (err) return reply(mainerr)
 hah = fs.readFileSync(ran)
 AlienAlfa.sendMessage(from, {audio:hah, mimetype:'audio/mp4', ptt:true}, {quoted:m})
 fs.unlinkSync(ran)
@@ -10475,7 +10415,7 @@ fs.unlinkSync(ran)
 ran = getRandom('.mp4')
 exec(`ffmpeg -i ${media} -filter:a "atempo=1.0,asetrate=${req}" ${ran}`, (err, stderr, stdout) => {
 fs.unlinkSync(media)
-if (err) return reply(lang.mainerr)
+if (err) return reply(mainerr)
 hah = fs.readFileSync(ran)
 AlienAlfa.sendMessage(from, {video:hah, mimetype:'video/mp4'}, {quoted:m})
 fs.unlinkSync(ran)
@@ -10493,13 +10433,13 @@ reply("Send video/audio")
 case 'volume': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!args.join(" ")) return reply(lang.example+`: ${prefix + command} 10`)
+if (!args.join(" ")) return reply(example+`: ${prefix + command} 10`)
 media = await AlienAlfa.downloadAndSaveMediaMessage(quoted, "volume")
 if (isQuotedAudio) {
 rname = getRandom('.mp3')
 exec(`ffmpeg -i ${media} -filter:a volume=${args[0]} ${rname}`, (err, stderr, stdout) => {
 fs.unlinkSync(media)
-if (err) return reply(lang.mainerr)
+if (err) return reply(mainerr)
 jadie = fs.readFileSync(rname)
 AlienAlfa.sendMessage(from, {audio:jadie, mimetype: 'audio/mp4', ptt: true}, {quoted: m})
 fs.unlinkSync(rname)
@@ -10508,7 +10448,7 @@ fs.unlinkSync(rname)
 rname = getRandom('.mp4')
 exec(`ffmpeg -i ${media} -filter:a volume=${args[0]} ${rname}`, (err, stderr, stdout) => {
 fs.unlinkSync(media)
-if (err) return reply(lang.mainerr)
+if (err) return reply(mainerr)
 jadie = fs.readFileSync(rname)
 AlienAlfa.sendMessage(from, {video:jadie, mimetype: 'video/mp4'}, {quoted: m})
 fs.unlinkSync(rname)
@@ -10640,7 +10580,7 @@ ${Object.entries(global.db.data.sticker).map(([key, value], index) => `${index +
             	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
                 if (!m.quoted) return reply(`Reply Message You Want To Save In Database`)
-                if (!text) return reply(lang.example+` : ${prefix + command} File Name`)
+                if (!text) return reply(example+` : ${prefix + command} File Name`)
                 let msgs = global.db.data.database
                 if (text.toLowerCase() in msgs) return reply(`'${text}' Has Been Registered In The Message List`)
                 msgs[text.toLowerCase()] = quoted.fakeObj
@@ -10659,7 +10599,7 @@ View List Of Messages With ${prefix}listmsg`)
             case 'getmsg': {
             	if (isBan) return reply(mess.ban)
 	if (isBanChat) return reply(mess.banChat)
-                if (!text) return reply(lang.example+` : ${prefix + command} file name\n\nView Message List With ${prefix}listmsg`)
+                if (!text) return reply(example+` : ${prefix + command} file name\n\nView Message List With ${prefix}listmsg`)
                 let msgs = global.db.data.database
                 if (!(text.toLowerCase() in msgs)) return reply(`'${text}' Not Listed In The Message List`)
                 AlienAlfa.copyNForward(m.chat, msgs[text.toLowerCase()], true)
@@ -11055,7 +10995,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
 case 'request': {
    if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
-if (!args.join(" ")) return replay(lang.example+` : ${prefix + command} hello dev please add a downloader feature`)
+if (!args.join(" ")) return replay(example+` : ${prefix + command} hello dev please add a downloader feature`)
 teks = `*| REQUEST |*`
 teks1 = `\n\nNumber : @${m.sender.split("@")[0]}\nRequest : ${args.join(" ")}`
 teks2 = `\n\nSuccessfully sent to owner`
@@ -11118,7 +11058,7 @@ AlienAlfa.sendMessage(m.chat, buttonMessage, { quoted: m })
 
 //|⬡════════════════════════════════════════════|❝ Ⓒ𝙰𝙻𝙸𝙴𝙽 𝙰𝙻𝙵𝙰 𝙱𝙾𝚃 𝙱𝚈 𝚃𝙾𝚇𝙸𝙲 𝙰𝙻𝙸𝙴𝙽™ ❞|═══════════════════════════════════════════⬡|//	
 
-case 'alive': {
+ case 'alive': {
     let uptime = runtime(process.uptime())
     await reply(`Runtime : ${runtime(uptime)}`)
     }break
@@ -11130,7 +11070,7 @@ case 'alive': {
     }break
     
     
-   case 'help': case 'list':  case '?': {
+  /* case 'help': case 'list':  case '?': {
 		if (isBan) return reply(mess.ban)	 			
 if (isBanChat) return reply(mess.banChat)
 AlienAlfa.sendMessage(from, { react: { text: `${global.reactmoji}`, key: m.key }})
@@ -11190,7 +11130,7 @@ try {
                     }
                      }
              break
-
+*/
 
 //|⬡════════════════════════════════════════════|❝ Ⓒ𝙰𝙻𝙸𝙴𝙽 𝙰𝙻𝙵𝙰 𝙱𝙾𝚃 𝙱𝚈 𝚃𝙾𝚇𝙸𝙲 𝙰𝙻𝙸𝙴𝙽™ ❞|═══════════════════════════════════════════⬡|//	
 
